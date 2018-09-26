@@ -64,7 +64,8 @@
                             <label for="Tipo" class="col-md-4 col-form-label text-md-right">{{ __('Tipo') }}</label>
 
                             <div class="col-md-6">
-                                <input id="tipo" type="number" class="form-control{{ $errors->has('tipo') ? ' is-invalid' : '' }}" name="tipo" value="{{ old('tipo') }}" required>
+                              <label>Cliente <input id="tipo" type="radio" value="1" class="form-control{{ $errors->has('tipo') ? ' is-invalid' : '' }}" name="tipo" value="{{ old('tipo') }}" required></label>  
+                              <label>Profissinal <input id="tipo" type="radio" value="2" class="form-control{{ $errors->has('tipo') ? ' is-invalid' : '' }}" name="tipo" value="{{ old('tipo') }}" required></label> 
 
                                 @if ($errors->has('tipo'))
                                     <span class="invalid-feedback" role="alert">

@@ -38,20 +38,7 @@
                                 @endif
                             </div>
                         </div>
-                        <div class="form-group row">
-                            <label for="tipo" class="col-sm-4 col-form-label text-md-right">{{ __('tipo') }}</label>
-
-                            <div class="col-md-6">
-                                <input id="tipo" type="number" class="form-control{{ $errors->has('tipo') ? ' is-invalid' : '' }}" name="tipo" value="{{ old('tipo') }}" required autofocus>
-
-                                @if ($errors->has('tipo'))
-                                    <span class="invalid-feedback" role="alert">
-                                        <strong>{{ $errors->first('tipo') }}</strong>
-                                    </span>
-                                @endif
-                            </div>
-                        </div>
-                        
+                     
 
                         <div class="form-group row">
                             <div class="col-md-6 offset-md-4">

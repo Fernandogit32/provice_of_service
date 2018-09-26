@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers;
-
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -22,7 +22,11 @@ class HomeController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
+    {  if(Auth::user()->tipo==1){
         return view('home');
+    }else{
+        return view('homeProfissional');
+    }      
+       
     }
 }

@@ -14,7 +14,7 @@
                         </div>
                     @endif
 
-                    You are logged in! pagina Do Usuário
+                    You are logged in! Profissional
                 </div>
             </div>
         </div>
