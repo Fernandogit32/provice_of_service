@@ -18,3 +18,17 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
+
+
+Route::group(['prefix' => 'cliente'], function () {
+    Route::get('/cadastro', 'clienteController@formCadastro');  
+    Route::post('/cadastrar', 'clienteController@criaCliente');  
+    
+});
+
+
+
+Route::group(['prefix' => 'endereco'], function () {
+    Route::get('/cadastro/{id_cliente}{cidade}', 'enderecoController@criaEndereco');  
+    
+});
