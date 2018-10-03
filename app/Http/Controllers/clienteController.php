@@ -12,17 +12,33 @@ class clienteController extends Controller
 {
     function formCadastro()
     {
-        return view('cadastroCliente');
+        return view('cliente\cadastroCliente');
     }
 
     function criaCliente(request $request)
-    {       
-      $cliente = Cliente::create(['telefone'=> $request->telefone,'celular'=>$request->celular]);
+    {  
+        if(User::find($request->id)->cliente==null){
+            $cliente = Cliente::create(['telefone'=> $request->telefone,'celular'=>$request->celular]);
 
-      $endereco = Endereco::create(['cidade'=>$request->cidade,'bairro'=>$request->bairro,'rua'=>$request->rua,'numero'=>$request->numero]);
-       $cliente->user_id=$request->id;     
-       $cliente->endereco_id=$endereco->id;     
-       $cliente->save();       
-      return redirect()->action('clienteController@formCadastro');      
+            $endereco = Endereco::create(['cidade'=>$request->cidade,'bairro'=>$request->bairro,'rua'=>$request->rua,'numero'=>$request->numero]);
+             $cliente->user_id=$request->id;     
+             $cliente->endereco_id=$endereco->id;     
+             $cliente->save();       
+            return redirect()->action('clienteController@formCadastro');   
+        }else{
+            
+              $cliente = cliente::find(User::find($request->id)->cliente->id);
+              $cliente->telefone = $request->telefone;
+              $cliente->celular = $request->celular;              
+              $cliente->save();
+              $endereco =Endereco::find($cliente->endereco->id);
+              $endereco->cidade= $request->cidade;
+              $endereco->bairro= $request->bairro;
+              $endereco->rua= $request->rua;
+              $endereco->numero= $request->numero;
+              $endereco->save();
+           
+        }     
+         
     }
 }
