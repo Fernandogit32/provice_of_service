@@ -18,7 +18,7 @@ class clienteController extends Controller
     {       
       $cliente = Cliente::create(['telefone'=> $request->telefone,'celular'=>$request->celular]);
       $id=$cliente->id; 
-            
-     return redirect()->action('enderecoController@criaEndereco',['id_cliente' => $id,'cidade'=>$request->cidade]);
+               
+     return redirect()->action('enderecoController@criaEndereco',['id_cliente' => $id,'cidade'=>$request->cidade,'bairro'=>$request->bairro,'rua'=>$request->rua,'numero'=>$request->numero,'id_user'=>$request->id]);
     }
 }

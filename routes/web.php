@@ -26,9 +26,16 @@ Route::group(['prefix' => 'cliente'], function () {
     
 });
 
-
+//-----------------------------------//--------------------------------------------
 
 Route::group(['prefix' => 'endereco'], function () {
-    Route::get('/cadastro/{id_cliente}{cidade}', 'enderecoController@criaEndereco');  
+    Route::get('/cadastro/{id_cliente}{cidade}{bairro}{rua}{numero}{id_user}', 'enderecoController@criaEndereco');  
+    
+});
+
+//------------------------------------------//-------------------------------------------
+
+Route::group(['prefix' => 'Vincular'], function () {
+    Route::get('Cliente{id_cliente}{id_endereco}{id_user}', 'vinculaController@vinculoCliente');  
     
 });
