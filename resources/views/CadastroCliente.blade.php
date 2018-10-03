@@ -2,10 +2,11 @@
 <div class="container">
     <form action="cadastrar" method="post">
             {{ csrf_field() }}
+            <input name="id" value="{{Auth::user()->id}}" type="hidden"/>
         <h1>Contatos</h1>
         <div class="form-group">
             <label>Telefone</label>
-            <input type="tel" name="telefone" class="form-control" placeholder="Telefone">
+            <input type="tel" name="telefone" class="form-control" placeholder="telefone">
         </div>
         <div class="form-group">
             <label>Celular</label>
