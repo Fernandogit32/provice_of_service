@@ -57,7 +57,7 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-                                    <a class="dropdown-item" href="cliente/cadastro">
+                                    <a class="dropdown-item" href="/cliente/cadastro">
                                    
                                      {{ __('edtar perfil') }}
                                  </a>
