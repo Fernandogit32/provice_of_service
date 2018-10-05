@@ -14,19 +14,22 @@ class clienteController extends Controller
     {
         return view('cliente\cadastroCliente');
     }
+    function formInformacoes()
+    {
+        return view('cliente\informacoes');
+    }
+
 
     function criaCliente(request $request)
     {  
         if(User::find($request->id)->cliente==null){
             $cliente = Cliente::create(['telefone'=> $request->telefone,'celular'=>$request->celular]);
-
             $endereco = Endereco::create(['cidade'=>$request->cidade,'bairro'=>$request->bairro,'rua'=>$request->rua,'numero'=>$request->numero]);
              $cliente->user_id=$request->id;     
              $cliente->endereco_id=$endereco->id;     
              $cliente->save();       
             return redirect()->action('clienteController@formCadastro');   
-        }else{
-            
+        }else{            
               $cliente = cliente::find(User::find($request->id)->cliente->id);
               $cliente->telefone = $request->telefone;
               $cliente->celular = $request->celular;              
@@ -37,8 +40,8 @@ class clienteController extends Controller
               $endereco->rua= $request->rua;
               $endereco->numero= $request->numero;
               $endereco->save();
-           
-        }     
+              return redirect()->action('clienteController@formCadastro');            
+            }     
          
     }
 }

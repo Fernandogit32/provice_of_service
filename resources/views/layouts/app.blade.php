@@ -20,6 +20,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
+    
     <div id="app">
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
             <div class="container">               
@@ -57,10 +58,9 @@
                                                      document.getElementById('logout-form').submit();">
                                         {{ __('Logout') }}
                                     </a>
-                                    <a class="dropdown-item" href="/cliente/cadastro">
-                                   
-                                     {{ __('edtar perfil') }}
-                                 </a>
+
+
+                                    <a class="dropdown-item" href="/cliente/cadastro">{{ __('edtar perfil') }}</a>
 
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf

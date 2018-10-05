@@ -23,6 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['prefix' => 'cliente'], function () {
     Route::get('/cadastro', 'clienteController@formCadastro');  
     Route::post('/cadastrar', 'clienteController@criaCliente');  
+    Route::get('/informacao', 'clienteController@formInformacoes');  
     
 });
 
