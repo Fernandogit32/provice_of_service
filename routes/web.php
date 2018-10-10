@@ -28,3 +28,7 @@ Route::group(['prefix' => 'cliente'], function () {
 });
 
 
+Route::group(['prefix' => 'profissional'], function () {
+    Route::get('/cadastro', 'ProfissionalController@formCadastro');  
+
+});

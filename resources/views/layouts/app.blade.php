@@ -59,9 +59,12 @@
                                         {{ __('Logout') }}
                                     </a>
 
-
-                                    <a class="dropdown-item" href="/cliente/cadastro">{{ __('edtar perfil') }}</a>
-
+                                   
+                                    @if(Auth::user()->tipo==1)                                
+                                  <a class="dropdown-item" href="/cliente/cadastro">{{ __('edtar perfil') }}</a>
+                                    @else
+                                  <a class="dropdown-item" href="/profissional/cadastro">{{ __('edtar perfil') }}</a>
+                                    @endif
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
