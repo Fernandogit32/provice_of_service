@@ -24,7 +24,7 @@ class clienteController extends Controller
     {  
         if(User::find($request->id)->cliente==null){
             $cliente = Cliente::create(['telefone'=> $request->telefone,'celular'=>$request->celular]);
-            $endereco = Endereco::create(['cidade'=>$request->cidade,'bairro'=>$request->bairro,'rua'=>$request->rua,'numero'=>$request->numero]);
+            $endereco = Endereco::create(['cidade'=>$request->cidade,'cep'=>$request->cep,'bairro'=>$request->bairro,'rua'=>$request->rua,'numero'=>$request->numero]);
              $cliente->user_id=$request->id;     
              $cliente->endereco_id=$endereco->id;     
              $cliente->save();       

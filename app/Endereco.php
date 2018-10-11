@@ -7,8 +7,9 @@ use App\Cliente;
 
 class Endereco extends Model
 {
-    protected $fillable =[
+    protected $fillable =[       
         'cidade',
+        'cep',
         'bairro',
         'rua',
         'numero',
