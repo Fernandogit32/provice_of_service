@@ -1,9 +1,25 @@
 @extends('cliente\menuCliente')
 @section('menu')
 <div class="container">
-        <script type="text/javascript" src="<?php echo asset('js/pegarEndereco.js')?>"></script>      
+        <script type="text/javascript" src="<?php echo asset('js/acao.js')?>"></script>    
+         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>  
              
-        
+                            <script type="text/javascript">
+                                 $("#telefone").mask("(00) 0000-0000");
+                                 $("#celular").mask("(00) 00000-0000");                                
+                            </script>
+                    
+         <div class="container">
+            @if (count($errors) > 0)
+            <div class="alert alert-danger">
+            <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+            </ul>
+            </div>            
+            @endif
            
     <form action="cadastrar" method="post">
             {{ csrf_field() }}
@@ -12,11 +28,11 @@
         <div class="form-group">
             @if(Auth::user()->cliente!=null)
                 <label>Telefone</label>
-                <input type="tel" name="telefone" class="form-control" value="{{Auth::user()->cliente->telefone}}" placeholder="telefone">
+                <input type="text" name="telefone" id="telefone" class="form-control" value="{{Auth::user()->cliente->telefone}}" placeholder="telefone">
                 </div>
                 <div class="form-group">
                     <label>Celular</label>
-                    <input type="tel" name="celular" class="form-control" value="{{Auth::user()->cliente->celular}}" placeholder=" Celular">
+                    <input type="text" name="celular" id="celular" class="form-control" value="{{Auth::user()->cliente->celular}}" placeholder=" Celular">
                 </div>
                 <hr>
                 <h1>Endereço</h1>                
@@ -26,15 +42,15 @@
                 </div>
                 <div class="form-group">
                     <label>Cidade</label>
-                    <input type="text" name="cidade" value="{{Auth::user()->cliente->endereco->cidade}}" class="form-control" placeholder="Cidade">
+                    <input type="text" name="cidade" id="cidade" value="{{Auth::user()->cliente->endereco->cidade}}" class="form-control" placeholder="Cidade">
                 </div>
                 <div class="form-group">
                     <label>Bairro</label>
-                    <input type="text" name="bairro" value="{{Auth::user()->cliente->endereco->bairro}}" class="form-control" placeholder="Bairro">
+                    <input type="text" name="bairro" id="bairro" value="{{Auth::user()->cliente->endereco->bairro}}" class="form-control" placeholder="Bairro">
                 </div>
                 <div class="form-group">
                     <label>Rua</label>
-                    <input type="text" name="rua" value="{{Auth::user()->cliente->endereco->rua}}" class="form-control" placeholder="Rua">
+                    <input type="text" name="rua" id="rua" value="{{Auth::user()->cliente->endereco->rua}}" class="form-control" placeholder="Rua">
                 </div>
                 <div class="form-group">
                     <label>Número</label>
@@ -80,7 +96,8 @@
         </form>
     
     </div>
-    @endif             
+    @endif     
+       
             
             
 @extends('layouts.app')

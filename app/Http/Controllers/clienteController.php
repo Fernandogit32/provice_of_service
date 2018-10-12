@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Cliente;
 use App\User;
 use App\Endereco;
+use App\Http\Requests\ClienteRequest;
 
 class clienteController extends Controller
 {
@@ -20,7 +21,7 @@ class clienteController extends Controller
     }
 
 
-    function criaCliente(request $request)
+    function criaCliente(ClienteRequest $request)
     {  
         if(User::find($request->id)->cliente==null){
             $cliente = Cliente::create(['telefone'=> $request->telefone,'celular'=>$request->celular]);
