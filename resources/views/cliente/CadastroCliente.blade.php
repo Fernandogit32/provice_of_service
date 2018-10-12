@@ -1,7 +1,7 @@
 @extends('cliente\menuCliente')
 @section('menu')
 <div class="container">
-        <script type="text/javascript" src="<?php echo asset('js/acao.js')?>"></script>    
+        <script type="text/javascript" src="<?php echo asset('js/acao.js')?>"></script>
          <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>  
              
@@ -64,11 +64,11 @@
         
             @else
             <label>Telefone</label>
-            <input type="tel" name="telefone" class="form-control" value="" placeholder="telefone">
+            <input type="tel" name="telefone" id="telefone" class="form-control" value="" placeholder="telefone">
             </div>
             <div class="form-group">
                 <label>Celular</label>
-                <input type="tel" name="celular" class="form-control" value="" placeholder=" Celular">
+                <input type="tel" name="celular" id="celular" class="form-control" value="" placeholder=" Celular">
             </div>
             <hr>
             <h1>Endereço</h1>            

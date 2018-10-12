@@ -27,8 +27,14 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+    
+
     public function cliente()
     {
         return $this->hasOne(Cliente::class, 'user_id');
     }
+
+    
+    
+    
 }

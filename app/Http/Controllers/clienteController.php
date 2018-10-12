@@ -29,7 +29,7 @@ class clienteController extends Controller
              $cliente->user_id=$request->id;     
              $cliente->endereco_id=$endereco->id;     
              $cliente->save();       
-            return redirect()->action('clienteController@formCadastro');   
+            return redirect()->action('clienteController@formInformacoes');   
         }else{            
               $cliente = cliente::find(User::find($request->id)->cliente->id);
               $cliente->telefone = $request->telefone;
@@ -41,7 +41,7 @@ class clienteController extends Controller
               $endereco->rua= $request->rua;
               $endereco->numero= $request->numero;
               $endereco->save();
-              return redirect()->action('clienteController@formCadastro');            
+              return redirect()->action('clienteController@formInformacoes');            
             }     
          
     }

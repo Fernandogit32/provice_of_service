@@ -12,8 +12,7 @@ class Cliente extends Model
     'telefone',
     'celular',
     'user_id',
-    'endereco_id',
-    
+    'endereco_id',    
     ];
 
     public function user(){
