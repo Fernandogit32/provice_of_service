@@ -5,7 +5,18 @@
         $("#telefone").mask("(00) 0000-0000");
         $("#celular").mask("(00) 00000-0000");                                
     </script>
-
+    
+ <div class="container">
+    @if (count($errors) > 0)
+    <div class="alert alert-danger">
+    <ul>
+    @foreach ($errors->all() as $error)
+    <li>{{ $error }}</li>
+    @endforeach
+    </ul>
+    </div>            
+    @endif
+   
     <form action="cadastrar" method="post">
         {{ csrf_field() }}
         <input name="id" value="{{Auth::user()->id}}" type="hidden" />

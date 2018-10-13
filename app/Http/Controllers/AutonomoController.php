@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
+use App\Http\Requests\AutonomoRequest;
 use App\Autonomo;
 use App\User;
 
@@ -12,7 +13,7 @@ class AutonomoController extends Controller
     function formCadastro(){
         return view('Autonomo\CadastroAutonomo');
     }
-    function criaAutonomo(request $request){
+    function criaAutonomo(AutonomoRequest $request){
        if(User::find($request->id)->autonomo==null){
         $autonomo =  Autonomo::create(['telefone'=>$request->telefone,
         'celular'=>$request->celular,'profissao'=>$request->profissao,
