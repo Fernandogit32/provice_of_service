@@ -1,4 +1,6 @@
 <!DOCTYPE html>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.11/jquery.mask.min.js"></script>  
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
     <meta charset="utf-8">
@@ -53,21 +55,22 @@
                                 </a>
 
                                 <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
-                                    <a class="dropdown-item" href="{{ route('logout') }}"
-                                       onclick="event.preventDefault();
-                                                     document.getElementById('logout-form').submit();">
-                                        {{ __('Logout') }}
-                                    </a>
+                                   
 
                                    
                                     @if(Auth::user()->tipo==1)                                
                                   <a class="dropdown-item" href="/cliente/cadastro">{{ __('edtar perfil') }}</a>
                                     @else
-                                  <a class="dropdown-item" href="/profissional/cadastro">{{ __('edtar perfil') }}</a>
+                                  <a class="dropdown-item" href="/autonomo/cadastro">{{ __('edtar perfil') }}</a>
                                     @endif
                                     <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                         @csrf
                                     </form>
+                                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                                    </a>
                                 </div>
                             </li>
                         @endguest

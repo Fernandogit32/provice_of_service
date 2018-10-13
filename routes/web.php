@@ -28,7 +28,7 @@ Route::group(['prefix' => 'cliente'], function () {
 });
 
 
-Route::group(['prefix' => 'profissional'], function () {
-    Route::get('/cadastro', 'ProfissionalController@formCadastro');  
-    Route::post('/cadastrar', 'ProfissionalController@criaProfissional');  
+Route::group(['prefix' => 'autonomo'], function () {
+    Route::get('/cadastro', 'AutonomoController@formCadastro');  
+    Route::post('/cadastrar', 'AutonomoController@criaAutonomo');  
 });

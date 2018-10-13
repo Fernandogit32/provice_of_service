@@ -33,8 +33,10 @@ class User extends Authenticatable
     {
         return $this->hasOne(Cliente::class, 'user_id');
     }
-
-    
+    public function autonomo()
+    {
+        return $this->hasOne(Autonomo::class, 'user_id');
+    }    
     
     
 }
