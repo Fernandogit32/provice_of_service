@@ -31,4 +31,5 @@ Route::group(['prefix' => 'cliente'], function () {
 Route::group(['prefix' => 'autonomo'], function () {
     Route::get('/cadastro', 'AutonomoController@formCadastro');  
     Route::post('/cadastrar', 'AutonomoController@criaAutonomo');  
+    Route::get('/informacao', 'AutonomoController@formInformacoes');  
 });

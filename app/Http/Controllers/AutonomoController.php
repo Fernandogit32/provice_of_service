@@ -17,6 +17,7 @@ class AutonomoController extends Controller
         $autonomo =  Autonomo::create(['telefone'=>$request->telefone,
         'celular'=>$request->celular,'profissao'=>$request->profissao,
         'descricao'=>$request->descricao,'user_id'=>$request->id]);
+        return redirect()->action('AutonomoController@formInformacoes');   
        }else{
         $autonomo = User::find($request->id)->autonomo;
         $autonomo->telefone = $request->telefone;
@@ -25,7 +26,10 @@ class AutonomoController extends Controller
         $autonomo->descricao = $request->descricao;
         $autonomo->save();
        }
-       return redirect()->action('AutonomoController@formCadastro');   
+       return redirect()->action('AutonomoController@formInformacoes');   
 
+    }
+    function formInformacoes(){
+        return view('Autonomo\informacoes');
     }
 }

@@ -1,5 +1,5 @@
-@extends('cliente\menuCliente')
- @section('menu')
+@extends('Autonomo\menuAutonomo')
+ @section('menuAutonomo')
 <div class="container">
     <script type="text/javascript">
         $("#telefone").mask("(00) 0000-0000");

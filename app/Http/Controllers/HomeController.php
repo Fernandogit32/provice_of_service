@@ -25,7 +25,7 @@ class HomeController extends Controller
     {  if(Auth::user()->tipo==1){
         return view('home');
     }else{
-        return view('homeProfissional');
+        return view('homeAutonomo');
     }      
        
     }
