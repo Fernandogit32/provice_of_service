@@ -23,7 +23,7 @@ class clienteController extends Controller
 
     function criaCliente(ClienteRequest $request)
     {  
-        if(User::find($request->id)->cliente==null){
+        if(Auth::user()->cliente==null){
             $cliente = Cliente::create(['telefone'=> $request->telefone,'celular'=>$request->celular]);
             $endereco = Endereco::create(['cidade'=>$request->cidade,'cep'=>$request->cep,'bairro'=>$request->bairro,'rua'=>$request->rua,'numero'=>$request->numero]);
              $cliente->user_id=$request->id;     
@@ -31,7 +31,7 @@ class clienteController extends Controller
              $cliente->save();       
             return redirect()->action('clienteController@formInformacoes');   
         }else{            
-              $cliente = cliente::find(User::find($request->id)->cliente->id);
+              $cliente = cliente::find(Auth::user()->cliente->id);
               $cliente->telefone = $request->telefone;
               $cliente->celular = $request->celular;              
               $cliente->save();

@@ -18,7 +18,7 @@ class CreateAutonomosTable extends Migration
             $table->string('telefone');
             $table->string('celular');
             $table->string('profissao');
-            $table->string('descricao');
+            $table->string('descricao');        
             $table->float('media', 8, 2)->nullable();
             $table->integer('user_id')->unsigned()->nullable();    
             $table->foreign('user_id')->references('id')->on('users');

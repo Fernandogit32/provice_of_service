@@ -10,7 +10,7 @@ class Autonomo extends Model
         'telefone',
         'celular',
         'profissao',
-        'descricao',
+        'descricao',       
         'user_id',
     ];
     
