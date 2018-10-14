@@ -8,6 +8,7 @@ use App\Cliente;
 use App\User;
 use App\Endereco;
 use App\Http\Requests\ClienteRequest;
+use Illuminate\Support\Facades\Auth;
 
 class clienteController extends Controller
 {
@@ -26,7 +27,7 @@ class clienteController extends Controller
         if(Auth::user()->cliente==null){
             $cliente = Cliente::create(['telefone'=> $request->telefone,'celular'=>$request->celular]);
             $endereco = Endereco::create(['cidade'=>$request->cidade,'cep'=>$request->cep,'bairro'=>$request->bairro,'rua'=>$request->rua,'numero'=>$request->numero]);
-             $cliente->user_id=$request->id;     
+             $cliente->user_id=Auth::user()->id;     
              $cliente->endereco_id=$endereco->id;     
              $cliente->save();       
             return redirect()->action('clienteController@formInformacoes');   
