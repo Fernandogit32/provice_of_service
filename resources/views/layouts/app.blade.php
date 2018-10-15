@@ -58,9 +58,11 @@
                                 {{ Auth::user()->name }} <span class="caret"></span>
                             </a>
                             @if(Auth::user()->tipo==2)
+                            @if(Auth::user()->autonomo!="")
                             <div class="foto">
                                 <img height="100" src="{{ url("storage/imagens/".Auth::user()->autonomo->foto)}}" alt="{{Auth::user()->autonomo->foto}}"  />
                             </div>
+                            @endif
                             @endif
                            
                             

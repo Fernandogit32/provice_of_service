@@ -20,7 +20,7 @@ Auth::routes();
 Route::get('/home', 'HomeController@index')->name('home');
 
 
-Route::group(['prefix' => 'cliente'], function () {
+Route::group(['prefix' => 'cliente','middleware'=>'auth.User'], function () {
     Route::get('/cadastro', 'clienteController@formCadastro');  
     Route::post('/cadastrar', 'clienteController@criaCliente');  
     Route::get('/informacao', 'clienteController@formInformacoes');  
@@ -28,7 +28,7 @@ Route::group(['prefix' => 'cliente'], function () {
 });
 
 
-Route::group(['prefix' => 'autonomo'], function () {
+Route::group(['prefix' => 'autonomo','middleware'=>'auth.Autonomo'], function () {
     Route::get('/cadastro', 'AutonomoController@formCadastro');  
     Route::post('/cadastrar', 'AutonomoController@criaAutonomo');  
     Route::get('/informacao', 'AutonomoController@formInformacoes');  
