@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreateAutonomosTable extends Migration
+class CreatePedidosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,14 @@ class CreateAutonomosTable extends Migration
      */
     public function up()
     {
-        Schema::create('autonomos', function (Blueprint $table) {
+        Schema::create('pedidos', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('telefone');
-            $table->string('celular');
-            $table->string('profissao');
-            $table->text('descricao');        
-            $table->string('foto')->nullable();        
-            $table->float('media', 8, 2)->nullable();
+            $table->text('descricao');            
+            $table->boolean('status'); 
             $table->integer('user_id')->unsigned()->nullable();    
-            $table->foreign('user_id')->references('id')->on('users');
+            $table->foreign('user_id')->references('id')->on('users');    
+            $table->integer('autonomo_id')->unsigned()->nullable();    
+            $table->foreign('autonomo_id')->references('id')->on('autonomos');       
             $table->timestamps();
         });
     }
@@ -34,6 +32,6 @@ class CreateAutonomosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('autonomos');
+        Schema::dropIfExists('pedidos');
     }
 }

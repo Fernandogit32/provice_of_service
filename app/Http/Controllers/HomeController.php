@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Http\Request;
+use App\Autonomo;
 
 class HomeController extends Controller
 {
@@ -23,7 +24,8 @@ class HomeController extends Controller
      */
     public function index()
     {  if(Auth::user()->tipo==1){
-        return view('home');
+        $autonomos = Autonomo::all();  
+        return view('home')->with('autonomos',$autonomos);
     }else{
         return view('homeAutonomo');
     }      

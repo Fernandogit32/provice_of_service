@@ -17,7 +17,7 @@ class clienteController extends Controller
         return view('cliente\cadastroCliente');
     }
     function formInformacoes()
-    {
+    {        
         return view('cliente\informacoes');
     }
 

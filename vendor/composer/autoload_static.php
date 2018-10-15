@@ -327,6 +327,7 @@ class ComposerStaticInitfc8048e9ddf7a8dce48569891c713def
     );
 
     public static $classMap = array (
+        'App\\Autonomo' => __DIR__ . '/../..' . '/app/Autonomo.php',
         'App\\Cliente' => __DIR__ . '/../..' . '/app/Cliente.php',
         'App\\Console\\Kernel' => __DIR__ . '/../..' . '/app/Console/Kernel.php',
         'App\\Endereco' => __DIR__ . '/../..' . '/app/Endereco.php',
@@ -336,6 +337,7 @@ class ComposerStaticInitfc8048e9ddf7a8dce48569891c713def
         'App\\Http\\Controllers\\Auth\\RegisterController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/RegisterController.php',
         'App\\Http\\Controllers\\Auth\\ResetPasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ResetPasswordController.php',
         'App\\Http\\Controllers\\Auth\\VerificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/VerificationController.php',
+        'App\\Http\\Controllers\\AutonomoController' => __DIR__ . '/../..' . '/app/Http/Controllers/AutonomoController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\HomeController' => __DIR__ . '/../..' . '/app/Http/Controllers/HomeController.php',
         'App\\Http\\Controllers\\clienteController' => __DIR__ . '/../..' . '/app/Http/Controllers/clienteController.php',
@@ -347,6 +349,9 @@ class ComposerStaticInitfc8048e9ddf7a8dce48569891c713def
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
+        'App\\Http\\Middleware\\checkAutonomo' => __DIR__ . '/../..' . '/app/Http/Middleware/checkAutonomo.php',
+        'App\\Http\\Middleware\\checkUsuario' => __DIR__ . '/../..' . '/app/Http/Middleware/checkUsuario.php',
+        'App\\Http\\Requests\\AutonomoRequest' => __DIR__ . '/../..' . '/app/Http/Requests/AutonomoRequest.php',
         'App\\Http\\Requests\\ClienteRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ClienteRequest.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
         'App\\Providers\\AuthServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AuthServiceProvider.php',
