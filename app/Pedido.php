@@ -9,7 +9,8 @@ class Pedido extends Model
    protected $fillable =[
     'descricao',
     'status',
-    'user_id',
+    'cliente_id',
     'autonomo_id',
-   ];
+   ];  
+
 }

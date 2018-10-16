@@ -16,7 +16,10 @@
        <br/> <label><strong>Nome: </strong>{{$autonomo->user->name}}</label>
        <br/> <label><strong>Profissao: </strong>{{$autonomo->profissao}}</label>
        <br/> <label><strong>descricao: </strong>{{$autonomo->descricao}}</label><br />
-       <button type="button" value="{{$autonomo->id}}" class="btn btn-success">Solicitar</button>
+       <form  method="post" action="cliente/pedido"> 
+            {{ csrf_field()}}
+       <button type="submit"  name="pedido" value="{{$autonomo->id}}" class="btn btn-success">Solicitar</button>
+    </form>
     </div> 
     
     

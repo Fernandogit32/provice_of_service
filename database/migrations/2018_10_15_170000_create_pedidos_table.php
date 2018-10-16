@@ -17,8 +17,8 @@ class CreatePedidosTable extends Migration
             $table->increments('id');
             $table->text('descricao');            
             $table->boolean('status'); 
-            $table->integer('user_id')->unsigned()->nullable();    
-            $table->foreign('user_id')->references('id')->on('users');    
+            $table->integer('cliente_id')->unsigned()->nullable();    
+            $table->foreign('cliente_id')->references('id')->on('clientes');    
             $table->integer('autonomo_id')->unsigned()->nullable();    
             $table->foreign('autonomo_id')->references('id')->on('autonomos');       
             $table->timestamps();
