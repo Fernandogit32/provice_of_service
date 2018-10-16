@@ -22,5 +22,9 @@ class Cliente extends Model
        public function endereco(){
         return $this->BelongsTo(Endereco::class , 'endereco_id');   
        }
+
+       public function pedidos(){
+        return $this->hasMany(Pedido::class , 'cliente_id');
+    }
     
 }
