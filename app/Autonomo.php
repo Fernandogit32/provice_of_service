@@ -18,5 +18,9 @@ class Autonomo extends Model
     public function user(){
         return $this->BelongsTo(User::class , 'user_id');   
        }
+       public function pedidos(){
+        return $this->hasMany(Pedido::class , 'autonomo_id');
+    }
+      
 
 }

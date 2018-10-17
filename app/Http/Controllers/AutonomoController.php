@@ -15,6 +15,10 @@ class AutonomoController extends Controller
     function formCadastro(){
         return view('Autonomo\CadastroAutonomo');
     }
+
+    function formSolicitacao(){
+        return view('Autonomo\solicitacao');
+    }
     function criaAutonomo(AutonomoRequest $request){
         $nameFile = null;
  

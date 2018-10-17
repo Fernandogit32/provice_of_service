@@ -16,6 +16,9 @@ class Pedido extends Model
    public function cliente(){
     return $this->BelongsTo(Cliente::class , 'cliente_id');   
    }
+   public function autonomo(){
+    return $this->BelongsTo(Autonomo::class , 'autonomo_id');   
+   }
   
 
 }
