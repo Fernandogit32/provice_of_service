@@ -23,4 +23,9 @@ class PedidoController extends Controller
           return redirect()->action('HomeController@index');     
    }
 
+   function formAvaliar(){   
+     $pedidos = Auth::user()->cliente->pedidos;
+      return view('Cliente/solicitacao')->with('pedidos',$pedidos);
+  }
+
 }

@@ -16,7 +16,8 @@
                 <th scope="col">Aceitar</th>
                 <th scope="col">Recusar</th>
             </tr>
-            @foreach ($pedidos as $item) @if($item->status==false)
+            @foreach ($pedidos as $item)
+             @if($item->status==false)
             <tr>
                 <td>
                     {{$item->cliente->user->name}} 
@@ -48,10 +49,11 @@
               </tr>
               <tr style="border-bottom-style:solid">
                  
-                  <td colspan="9"><strong>Descrição:</strong>  {{$item->descricao}} </td>
+                  <td colspan="9"><label style="color:red"><strong>Descrição:</strong></label>&nbsp&nbsp{{$item->descricao}} </td>
             </tr>            
             
-            @endif @endforeach
+            @endif 
+            @endforeach
         </tbody>
 
     </table>
