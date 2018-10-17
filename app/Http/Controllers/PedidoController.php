@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use App\Autonomo;
 use App\Pedido;
 use Illuminate\Support\Facades\Auth;
+use App\Http\Requests\PedidoRequest;
 
 class PedidoController extends Controller
 {
@@ -16,7 +17,7 @@ class PedidoController extends Controller
        return view('cliente/ficha_de_pedido')->with('autonomo',$autonomo);
    }
 
-   function pedir(request $request){     
+   function pedir(PedidoRequest $request){     
           Pedido::create(['descricao'=>$request->descricao,'status'=>false,
           'cliente_id'=>Auth::user()->cliente->id,'autonomo_id'=>$request->autonomo_id]);
           return redirect()->action('HomeController@index');     

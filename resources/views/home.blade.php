@@ -13,13 +13,12 @@
     
     <div class="opition col-md-3 form-group">
         <img height="100" src="{{ url("storage/imagens/".$autonomo->foto)}}" alt="{{$autonomo->foto}}"/>
-       <br/> <label><strong>Nome: </strong>{{$autonomo->user->name}}</label>
-       <br/> <label><strong>Profissao: </strong>{{$autonomo->profissao}}</label>
-       <br/> <label><strong>descricao: </strong>{{$autonomo->descricao}}</label><br />
-       <form  method="post" action="cliente/pedido"> 
-            {{ csrf_field()}}
-       <button type="submit"  name="pedido" value="{{$autonomo->id}}" class="btn btn-success">Solicitar</button>
-    </form>
+        <br/> <label><strong>Nome: </strong>{{$autonomo->user->name}}</label>
+        <br/> <label><strong>Profissao: </strong>{{$autonomo->profissao}}</label>
+        <br/> <label><strong>descricao: </strong>{{$autonomo->descricao}}</label><br />
+        <form  method="GET" action="cliente/pedido">
+            <button type="submit"  name="pedido" value="{{$autonomo->id}}" class="btn btn-success">Solicitar</button>
+        </form>
     </div> 
     
     

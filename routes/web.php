@@ -24,7 +24,7 @@ Route::group(['prefix' => 'cliente','middleware'=>'auth.User'], function () {
     Route::get('/cadastro', 'clienteController@formCadastro');  
     Route::post('/cadastrar', 'clienteController@criaCliente');      
     Route::get('/informacao', 'clienteController@formInformacoes');  
-    Route::post('/pedido', 'PedidoController@formPedido');  
+    Route::get('/pedido', 'PedidoController@formPedido');  
     Route::post('/pedir', 'PedidoController@pedir');  
     
 });
