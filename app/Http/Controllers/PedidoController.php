@@ -17,9 +17,9 @@ class PedidoController extends Controller
        return view('cliente/ficha_de_pedido')->with('autonomo',$autonomo);
    }
 
-   function pedir(PedidoRequest $request){     
+   function pedir(PedidoRequest $request){            
           Pedido::create(['descricao'=>$request->descricao,'status'=>false,
-          'cliente_id'=>Auth::user()->cliente->id,'autonomo_id'=>$request->autonomo_id]);
+          'cliente_id'=>Auth::user()->cliente->id,'autonomo_id'=> $request->id_autonomo]);
           return redirect()->action('HomeController@index');     
    }
 

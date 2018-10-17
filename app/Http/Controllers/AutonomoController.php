@@ -17,7 +17,8 @@ class AutonomoController extends Controller
     }
 
     function formSolicitacao(){
-        return view('Autonomo\solicitacao');
+        $pedidos =  Auth::user()->autonomo->pedidos;
+        return view('Autonomo\solicitacao')->with('pedidos',$pedidos);
     }
     function criaAutonomo(AutonomoRequest $request){
         $nameFile = null;
