@@ -13,7 +13,7 @@
                                
                             </tr>
                             @foreach ($pedidos as $item)
-                            @if($item->status==false)
+                            @if($item->status==0)
                                 <tr>
                                     <td>
                                             {{$item->autonomo->user->name}} 

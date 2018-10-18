@@ -18,7 +18,7 @@ class PedidoController extends Controller
    }
 
    function pedir(PedidoRequest $request){            
-          Pedido::create(['descricao'=>$request->descricao,'status'=>false,
+          Pedido::create(['descricao'=>$request->descricao,'status'=>0,
           'cliente_id'=>Auth::user()->cliente->id,'autonomo_id'=> $request->id_autonomo]);
           return redirect()->action('HomeController@index');     
    }

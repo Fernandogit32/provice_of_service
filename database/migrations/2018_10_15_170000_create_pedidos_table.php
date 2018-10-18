@@ -16,7 +16,7 @@ class CreatePedidosTable extends Migration
         Schema::create('pedidos', function (Blueprint $table) {
             $table->increments('id');
             $table->text('descricao');            
-            $table->boolean('status'); 
+            $table->integer('status'); 
             $table->integer('cliente_id')->unsigned()->nullable();    
             $table->foreign('cliente_id')->references('id')->on('clientes');    
             $table->integer('autonomo_id')->unsigned()->nullable();    
