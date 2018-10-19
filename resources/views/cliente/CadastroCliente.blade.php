@@ -1,4 +1,5 @@
-@extends('cliente\menuCliente') @section('menu')
+@extends('cliente\menuCliente')
+ @section('menu')
 <div class="container">
 
 
@@ -94,4 +95,5 @@
     </form>
 
 </div>
-@endif @extends('layouts.app') @section('content') @endsection @endsection
+@endif @extends('layouts.app')
+ @section('content') @endsection @endsection

@@ -26,7 +26,9 @@
 <body>
 
     <div id="app">
+    
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
+        <img id="myImg" height="160" src="{{ URL::to('/img/logo.png') }}">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -91,11 +93,14 @@
                 </div>
             </div>
         </nav>
-
+        
         <main class="py-4">
             @yield('content')
         </main>
+    
+        
     </div>
+    
 </body>
 
 </html>

@@ -63,6 +63,9 @@ class Kernel extends HttpKernel
         'auth.User' => \App\Http\Middleware\checkUsuario::class,
         'auth.Autonomo' => \App\Http\Middleware\checkAutonomo::class,
         'verifica.autonomo' => \App\Http\Middleware\VerificaCriacaoAutonomo::class,
+        'auth.Cliente' => \App\Http\Middleware\checkCliente::class,
+        
+
         
     ];
 
