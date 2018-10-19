@@ -62,7 +62,7 @@ class Kernel extends HttpKernel
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         'auth.User' => \App\Http\Middleware\checkUsuario::class,
         'auth.Autonomo' => \App\Http\Middleware\checkAutonomo::class,
-        'auth.Cliente' => \App\Http\Middleware\checkCliente::class,
+        'verifica.autonomo' => \App\Http\Middleware\VerificaCriacaoAutonomo::class,
         
     ];
 

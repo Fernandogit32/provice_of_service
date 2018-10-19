@@ -35,5 +35,5 @@ Route::group(['prefix' => 'autonomo','middleware'=>'auth.Autonomo'], function ()
     Route::get('/cadastro', 'AutonomoController@formCadastro');  
     Route::post('/cadastrar', 'AutonomoController@criaAutonomo');  
     Route::get('/informacao', 'AutonomoController@formInformacoes');  
-    Route::get('/solicitacao', 'AutonomoController@formSolicitacao');  
+    Route::get('/solicitacao', 'AutonomoController@formSolicitacao')->middleware('verifica.autonomo');      ;  
 });

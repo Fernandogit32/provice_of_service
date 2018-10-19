@@ -41,10 +41,7 @@ class AutonomoController extends Controller
  
         // Verifica se NÃO deu certo o upload (Redireciona de volta)
         if ( !$upload )
-            return redirect()
-                        ->back()
-                        ->with('error', 'Falha ao fazer upload')
-                        ->withInput();
+           return redirect()->back()->with('error', 'Falha ao fazer upload')->withInput();
  
     }       
 
