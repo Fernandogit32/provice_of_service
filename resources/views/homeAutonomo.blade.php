@@ -1,13 +1,8 @@
-@extends('Autonomo\menuAutonomo')
-@section('menuAutonomo')
+@extends('layouts.app')
+@section('content')
 <div class="container">
     
 </div>
-@extends('layouts.app')
-@section('content')
-
-
-
 @endsection
-@endsection
+
 

@@ -1,5 +1,5 @@
-@extends('cliente\menuCliente')
-@section('menu')
+@extends('layouts.app')
+@section('content')
 <div class="container">
     
     <?php 
@@ -35,10 +35,9 @@
    
 
 </div>
-@extends('layouts.app')
-@section('content')
+
 
 
 
 @endsection
-@endsection
+

@@ -25,8 +25,7 @@
 
 <body>
 
-    <div id="app">
-    
+    <div id="app">        
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
         <img id="myImg" height="160" src="{{ URL::to('/img/logo.png') }}">
             <div class="container">
@@ -90,15 +89,43 @@
                         </li>
                         @endguest
                     </ul>
+                  
                 </div>
-            </div>
+            </div>           
+           
         </nav>
+        @if(Auth::check())
+        @if(Auth::user()->tipo==1)
+        <div class="container">
+            <script type="text/javascript" src="<?php echo asset('js/acao.js')?>"></script>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="\home">Home</a>    
+            <a class="navbar-brand" href="\cliente\informacao">Informações</a> 
+            <a class="navbar-brand" href="\cliente\solicitacao">Solicitações</a>    
+            <a class="navbar-brand" href="#">Avaliar Serviços prestados</a>    
+            <a class="navbar-brand" href="#">Buscar</a>    
+          </nav>
+        </div>
+        @else
+        <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                <a class="navbar-brand" href="\home">Home</a>    
+                <a class="navbar-brand" href="\autonomo\informacao">Informações</a>    
+                <a class="navbar-brand" href="\autonomo\solicitacao">Solicitações</a>    
+                <a class="navbar-brand" href="#">Serviços</a>   
+             </nav>
+            </div>
+          @endif
+          @endif
+       
+          
         
-        <main class="py-4">
+       
             @yield('content')
-        </main>
-    
+           
         
+    <footer>Aqui Vai o rodapé</footer>
+      
     </div>
     
 </body>

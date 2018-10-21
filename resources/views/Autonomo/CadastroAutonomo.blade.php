@@ -1,4 +1,5 @@
-@extends('Autonomo\menuAutonomo') @section('menuAutonomo')
+@extends('layouts.app')
+@section('content')
 <div class="container">
     <script type="text/javascript">
         $("#telefone").mask("(00) 0000-0000");
@@ -68,4 +69,4 @@
         </form>
     </div>
 
-    @extends('layouts.app') @section('content') @endsection @endsection
+    @endsection

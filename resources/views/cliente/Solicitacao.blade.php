@@ -1,4 +1,5 @@
-@extends('cliente\menuCliente') @section('menu')
+@extends('layouts.app')
+@section('content')
 
 <div class="container">
 <h1>Solicitações Aguardando Aprovação</h1>
@@ -43,4 +44,4 @@
 </div>
 
 
-@extends('layouts.app') @section('content') @endsection @endsection
+ @endsection

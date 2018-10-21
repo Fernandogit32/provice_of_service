@@ -1,4 +1,5 @@
-@extends('Autonomo\menuAutonomo') @section('menuAutonomo')
+@extends('layouts.app')
+@section('content')
 <div class="container">
     <div class="card">
 
@@ -17,4 +18,4 @@
 
 
     </div>
-    @extends('layouts.app') @section('content') @endsection @endsection
+   @endsection

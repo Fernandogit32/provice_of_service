@@ -1,4 +1,5 @@
-@extends('cliente\menuCliente') @section('menu')
+@extends('layouts.app')
+@section('content')
 <div class="container">
         <div class="container">
                 @if (count($errors) > 0)
@@ -42,4 +43,4 @@
     <input type="submit" class="btn btn-primary" value="Enviar Pedido">
 </form>
 </div>
-@extends('layouts.app') @section('content') @endsection @endsection
+ @endsection
