@@ -102,7 +102,7 @@
             <a class="navbar-brand" href="\home">Home</a>    
             <a class="navbar-brand" href="\cliente\informacao">Informações</a> 
             <a class="navbar-brand" href="\cliente\solicitacao">Solicitações</a>    
-            <a class="navbar-brand" href="#">Avaliar Serviços prestados</a>    
+            <a class="navbar-brand" href="\cliente\avaliacao">Avaliar Serviços prestados</a>    
             <a class="navbar-brand" href="#">Buscar</a>    
           </nav>
         </div>

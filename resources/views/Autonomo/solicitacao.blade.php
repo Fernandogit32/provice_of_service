@@ -42,10 +42,16 @@
                     {{$item->cliente->endereco->numero}} 
                 </td>
                 <td>
-                    <button class="btn btn-success">Aceitar</button>
+                    <form action="servico" method="post">
+                            {{ csrf_field() }}
+                            <input name="id" value="{{$item->id}}" type="hidden"/>
+                        <button type="submit" class="btn btn-success">Aceitar</button>
+                    </form>
                 </td>
                 <td>
-                    <button class="btn btn-danger">Recusar</button>
+                    <form action="#" method="post">
+                            <button type="submit" class="btn btn-danger">Recusar</button>
+                    </form>                    
                 </td>             
               </tr>
               <tr style="border-bottom-style:solid">

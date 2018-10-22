@@ -23,9 +23,21 @@ class PedidoController extends Controller
           return redirect()->action('HomeController@index');     
    }
 
-   function formAvaliar(){   
+   function formSolicitacao(){   
      $pedidos = Auth::user()->cliente->pedidos;
       return view('Cliente/solicitacao')->with('pedidos',$pedidos);
+  }
+
+  function gerarSevico(request $request){
+    $pedido = Pedido::find($request->id);
+    $pedido->status =1;
+    $pedido->save();
+    return view('\home');
+  }
+
+  function formAvaliacao(){
+    $pedidos = Pedido::all();
+    return view('Cliente/avaliacao')->with('pedidos',$pedidos);
   }
 
 }
