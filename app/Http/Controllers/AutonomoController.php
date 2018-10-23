@@ -56,8 +56,7 @@ class AutonomoController extends Controller
         $autonomo->celular = $request->celular;
         $autonomo->profissao = $request->profissao;        
         $autonomo->descricao = $request->descricao;
-        if($nameFile!=""){
-                       echo   $autonomo->foto;           
+        if($nameFile!=""){                                 
             Storage::delete('imagens/'.$autonomo->foto);
             $autonomo->foto =$nameFile;
         }
@@ -69,4 +68,9 @@ class AutonomoController extends Controller
     function formInformacoes(){
         return view('Autonomo\informacoes');
     }
+    function formServicos(){
+        $pedidos =  Auth::user()->autonomo->pedidos;
+        return view('Autonomo\servicos')->with('pedidos',$pedidos);
+    }
+   
 }

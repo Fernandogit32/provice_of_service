@@ -32,12 +32,29 @@ class PedidoController extends Controller
     $pedido = Pedido::find($request->id);
     $pedido->status =1;
     $pedido->save();
-    return view('\home');
+    return redirect()->action('HomeController@index');  
+  }
+  function cancelarPedido(request $request){
+    $pedido = Pedido::find($request->id);
+    $pedido->status =3;
+    $pedido->save();
+    return redirect()->action('HomeController@index');  
   }
 
   function formAvaliacao(){
     $pedidos = Pedido::all();
     return view('Cliente/avaliacao')->with('pedidos',$pedidos);
+  }
+  function finalizarServico(request $request){
+    $pedido = Pedido::find($request->id);
+    $pedido->status =2;
+    $pedido->save();
+    return redirect()->action('HomeController@index');  
+  }
+  function excluir(request $request){
+     $pedido = Pedido::find($request->id);
+     $pedido->delete();
+     return redirect()->action('HomeController@index');
   }
 
 }

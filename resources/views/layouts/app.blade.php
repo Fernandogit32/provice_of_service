@@ -112,7 +112,7 @@
                 <a class="navbar-brand" href="\home">Home</a>    
                 <a class="navbar-brand" href="\autonomo\informacao">Informações</a>    
                 <a class="navbar-brand" href="\autonomo\solicitacao">Solicitações</a>    
-                <a class="navbar-brand" href="#">Serviços</a>   
+                <a class="navbar-brand" href="\autonomo\servicos">Serviços</a>   
              </nav>
             </div>
           @endif

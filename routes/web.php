@@ -26,6 +26,7 @@ Route::group(['prefix' => 'cliente','middleware'=>'auth.User'], function () {
     Route::get('/informacao', 'clienteController@formInformacoes');  
     Route::get('/pedido', 'PedidoController@formPedido')->middleware('auth.Cliente');      
     Route::post('/pedir', 'PedidoController@pedir');  
+    Route::delete('/excluir', 'PedidoController@excluir');  
     Route::get('/solicitacao', 'PedidoController@formSolicitacao')->middleware('auth.Cliente');      
     Route::get('/avaliacao', 'PedidoController@formAvaliacao')->middleware('auth.Cliente');      
     
@@ -36,6 +37,9 @@ Route::group(['prefix' => 'autonomo','middleware'=>'auth.Autonomo'], function ()
     Route::get('/cadastro', 'AutonomoController@formCadastro');  
     Route::post('/cadastrar', 'AutonomoController@criaAutonomo');  
     Route::get('/informacao', 'AutonomoController@formInformacoes');  
-    Route::get('/solicitacao', 'AutonomoController@formSolicitacao')->middleware('verifica.autonomo');  
+    Route::get('/solicitacao', 'AutonomoController@formSolicitacao')->middleware('verifica.autonomo');       
     Route::post('/servico', 'PedidoController@gerarSevico');      
+    Route::post('/recusar', 'PedidoController@cancelarPedido');      
+    Route::get('/servicos', 'AutonomoController@formServicos')->middleware('verifica.autonomo'); 
+    Route::post('/finalizar', 'PedidoController@finalizarServico');  
 });
