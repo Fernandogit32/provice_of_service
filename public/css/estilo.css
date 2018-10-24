@@ -1,0 +1,13 @@
+.rodape{
+    background: #87CEFF;
+    height: 50px;
+    text-align: center;
+    padding-top: 8px;
+    top: 100%;
+    position:absolute;
+    bottom:0;
+    width:100%;
+    }
+.navbar {
+    background: #87CEFF;
+}

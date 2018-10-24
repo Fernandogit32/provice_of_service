@@ -21,6 +21,7 @@
 
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/css/estilo.css">
 </head>
 
 <body>
@@ -124,7 +125,7 @@
             @yield('content')
            
         
-    <footer>Aqui Vai o rodapé</footer>
+    <footer class="rodape" >Aqui vai o rodapé</footer>
       
     </div>
     

@@ -33,7 +33,7 @@
                                     </td> 
                                     <td>
                                             @if($item->status==1)
-                                            {{'Serviso em curso'}}
+                                            {{'Serviço em curso'}}
                                             @else
                                             <form action="#"></form>
                                             <input type="submit" class="btn btn-primary" value="Avaliar">
