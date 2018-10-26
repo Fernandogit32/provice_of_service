@@ -62,7 +62,7 @@
                             @if(Auth::user()->tipo==2)
                             @if(Auth::user()->autonomo!="")
                             <div class="foto">
-                                <img height="100" src="{{ url("storage/imagens/".Auth::user()->autonomo->foto)}}" alt="{{Auth::user()->autonomo->foto}}"  />
+                                <img class="foto" src="{{ url("storage/imagens/".Auth::user()->autonomo->foto)}}" alt="{{Auth::user()->autonomo->foto}}"  />
                             </div>
                             @endif
                             @endif
@@ -128,7 +128,7 @@
     
       
     </div>
-    <footer class="rodape" >Aqui vai o rodapé</footer>
+    <footer class="rodape navbar-fixed-bottom" >Aqui vai o rodapé</footer>
 </body>
 
 </html>

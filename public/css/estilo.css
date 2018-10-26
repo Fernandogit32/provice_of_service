@@ -2,17 +2,36 @@
     position: relative;
 }
 
-.menu{
+.menu{   
     background-color: #00CED1; 
-    color: red;    
+    color: red;
+    -webkit-box-shadow: inset 0 6px 6px -7px  black;  
+    -moz-box-shadow: inset 0 6px 6px -7px  black;  
+    box-shadow: inset 0 6px 6px -7px  black; 
+    
+
+}
+
+.teste {
+    margin-top: 20%;
+}
+ 
+.foto {
+    width: 100px;
+    height: 100px;
+    border-radius: 200px
 }
 
 .menu nav{
-    background-color: #00CED1;  
+    background-color: #00CED1;
+    -webkit-box-shadow: inset 0 6px 6px -7px  black;  
+    -moz-box-shadow: inset 0 6px 6px -7px  black;  
+    box-shadow: inset 0 6px 6px -7px  black;  
+   
 }
 
-.navbar {
-    background: #87CEFF;
+.navbar-laravel {
+    background: #87CEFF; 
 }
 
 .menu nav a{
@@ -21,6 +40,8 @@ color: #473C8B;
 
 .menu nav a:hover{
     color: white;
+    -webkit-transition: 1s; /* Safari */
+    transition:  0.5s;
 }
 
 .rodape{
@@ -28,8 +49,13 @@ color: #473C8B;
     height: 50px;
     text-align: center;
     padding-top: 8px;
-    top: 105%;
-    position:absolute;
-    bottom:0;    
+    top: 105%;   
     width:100%;
+    -webkit-box-shadow: inset 0 6px 6px -7px  black;  
+    -moz-box-shadow: inset 0 6px 6px -7px  black;  
+    box-shadow: inset 0 6px 6px -7px  black;
+    position: absolute;
+    bottom:0;
+ 
 }
+
