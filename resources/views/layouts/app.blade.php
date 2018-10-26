@@ -92,14 +92,14 @@
                     </ul>
                   
                 </div>
-            </div>           
-           
+            </div>        
+          
         </nav>
         @if(Auth::check())
         @if(Auth::user()->tipo==1)
-        <div class="container">
+        <div class="container-fluid menu">
             <script type="text/javascript" src="<?php echo asset('js/acao.js')?>"></script>
-        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <nav class="navbar navbar-expand-lg navbar-expand-xs">
             <a class="navbar-brand" href="\home">Home</a>    
             <a class="navbar-brand" href="\cliente\informacao">Informações</a> 
             <a class="navbar-brand" href="\cliente\solicitacao">Solicitações</a>    
@@ -108,8 +108,8 @@
           </nav>
         </div>
         @else
-        <div class="container">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid menu">
+            <nav class="navbar navbar-expand-lg navbar-expand-xs">
                 <a class="navbar-brand" href="\home">Home</a>    
                 <a class="navbar-brand" href="\autonomo\informacao">Informações</a>    
                 <a class="navbar-brand" href="\autonomo\solicitacao">Solicitações</a>    
@@ -125,10 +125,10 @@
             @yield('content')
            
         
-    <footer class="rodape" >Aqui vai o rodapé</footer>
+    
       
     </div>
-    
+    <footer class="rodape" >Aqui vai o rodapé</footer>
 </body>
 
 </html>

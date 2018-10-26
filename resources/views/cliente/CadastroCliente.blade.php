@@ -1,14 +1,11 @@
 @extends('layouts.app')
 @section('content')
+<script type="text/javascript">
+    $("#telefone").mask("(00) 0000-0000");
+    $("#celular").mask("(00) 00000-0000");                                
+</script>
 
-
-<div class="container">
-
-
-    <script type="text/javascript">
-        $("#telefone").mask("(00) 0000-0000");
-        $("#celular").mask("(00) 00000-0000");                                
-    </script>
+<div class="corpo">   
 
     <div class="container">
         @if (count($errors) > 0)
@@ -19,6 +16,8 @@
                 @endforeach
             </ul>
         </div>
+        </div>
+        
         @endif
 
         <form action="cadastrar" method="post">
@@ -56,14 +55,14 @@
                 <label>Número</label>
                 <input type="number" name="numero" value="{{Auth::user()->cliente->endereco->numero}}" class="form-control" placeholder="Número">
             </div>
-            <div class="form-group">
+           
                 <button type="submit" class="btn btn-primary">Confirmar</button>
         </form>
 
-        </div>
-
         @else
-        <label>Telefone</label>
+        <div class="form-group">
+    <label>Telefone</label>
+    
         <input type="tel" name="telefone" id="telefone" class="form-control" value="" placeholder="telefone">
     </div>
     <div class="form-group">

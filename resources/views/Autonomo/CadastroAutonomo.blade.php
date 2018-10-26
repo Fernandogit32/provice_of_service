@@ -1,10 +1,12 @@
 @extends('layouts.app')
 @section('content')
-<div class="container">
-    <script type="text/javascript">
-        $("#telefone").mask("(00) 0000-0000");
-        $("#celular").mask("(00) 00000-0000");                                
-    </script>
+<script type="text/javascript">
+    $("#telefone").mask("(00) 0000-0000");
+    $("#celular").mask("(00) 00000-0000");                                
+</script>
+
+<div class="corpo">
+    
 
     <div class="container">
         @if (count($errors) > 0)
@@ -15,8 +17,11 @@
                 @endforeach
             </ul>
         </div>
+     
         @endif
-
+    </div>  
+    
+<div class="container">
         <form action="cadastrar" method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
             
@@ -64,9 +69,9 @@
                 <input type="file" name="image">
             </div>
             @endif
-
             <button type="submit" class="btn btn-primary">Confirmar</button>
         </form>
-    </div>
+    </div>  
+    
 
     @endsection

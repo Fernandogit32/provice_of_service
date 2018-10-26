@@ -1,13 +1,35 @@
+.corpo {
+    position: relative;
+}
+
+.menu{
+    background-color: #00CED1; 
+    color: red;    
+}
+
+.menu nav{
+    background-color: #00CED1;  
+}
+
+.navbar {
+    background: #87CEFF;
+}
+
+.menu nav a{
+color: #473C8B;
+}
+
+.menu nav a:hover{
+    color: white;
+}
+
 .rodape{
     background: #87CEFF;
     height: 50px;
     text-align: center;
     padding-top: 8px;
-    top: 100%;
+    top: 105%;
     position:absolute;
-    bottom:0;
+    bottom:0;    
     width:100%;
-    }
-.navbar {
-    background: #87CEFF;
 }
