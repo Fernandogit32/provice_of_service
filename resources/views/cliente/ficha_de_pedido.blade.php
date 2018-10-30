@@ -38,7 +38,7 @@
     <div class="form-group">
         <label>Escreva uma descrição do serviço esperado</label><br/>
         <input name="id_autonomo" value="<?php echo $_GET['pedido'];?>" type="hidden"/>           
-        <textarea cols=56 name="descricao" rows="5"  maxlength="500" wrap="hard" placeholder="Eplique com um breve resumo qual o serviço que vc deseja"></textarea>
+        <textarea cols=56 name="descricao" rows="5"  maxlength="500" wrap="hard" placeholder="Explique com um breve resumo qual o serviço que você deseja"></textarea>
     </div>
     <input type="submit" class="btn btn-primary" value="Enviar Pedido">
 </form>

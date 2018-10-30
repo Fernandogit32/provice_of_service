@@ -20,7 +20,7 @@
         
         @endif
 
-        <form action="cadastrar" method="post">
+        <form class="form-cadastro" action="cadastrar" method="post">
             {{ csrf_field() }}
             <h1>Contatos</h1>
             <div class="form-group">
@@ -35,7 +35,7 @@
             <hr>
             <h1>Endereço</h1>
             <div class="form-group">
-                <label>Cep</label>
+                <label>CEP</label>
                 <input name="cep" type="text" id="cep" maxlength="9" value="{{Auth::user()->cliente->endereco->cep}}" class="form-control"
                     placeholder="Cidade" onkeyup="pesquisacep(this.value);" />
             </div>

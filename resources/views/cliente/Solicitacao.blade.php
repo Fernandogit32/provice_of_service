@@ -2,18 +2,19 @@
 @section('content')
 
 <div class="container">
-<h1>Solicitações Aguardando Aprovação</h1>
-        <table class=" table table-borderless table-dark">  
-        
+<h1 id="h1-cliente">Solicitações de serviço</h1>
+        <table class="table table-borderless">  
+        <thead class="table-primary" >
+                <tr>
+                        <th scope="col">Profissional</th>
+                        <th scope="col">Telefone</th>
+                        <th scope="col">Celular</th>                            
+                        <th scope="col">Profissão</th>                               
+                        <th scope="col">Status</th>                               
+                       
+                    </tr>
+        </thead>
                 <tbody>
-                        <tr>
-                                <th scope="col">Profissional</th>
-                                <th scope="col">Telefone</th>
-                                <th scope="col">Celular</th>                            
-                                <th scope="col">Profissao</th>                               
-                                <th scope="col">Status</th>                               
-                               
-                            </tr>
                             @foreach ($pedidos as $item)
                             @if($item->status==0||$item->status==3)
                                 <tr>

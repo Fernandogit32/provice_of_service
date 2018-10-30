@@ -2,20 +2,22 @@
 @section('content')
 
 <div class="container">
-
-    <table class="table table-borderless table-dark">
+    <h1 id="h1-autonomo" >Serviços em andamento</h1>
+    <table class="table table-borderless">
+        <thead class="table-primary">
+                <tr>
+                        <th scope="col">Nome</th>
+                        <th scope="col">Telefone</th>
+                        <th scope="col">Celular</th>
+                        <th scope="col">Cidade</th>
+                        <th scope="col">Bairro</th>
+                        <th scope="col">Rua</th>
+                        <th scope="col">Número</th>
+                        <th scope="col">Finalizar Serviço</th>             
+                    </tr>
+        </thead>
 
         <tbody>
-            <tr>
-                <th scope="col">Nome</th>
-                <th scope="col">Telefone</th>
-                <th scope="col">Celular</th>
-                <th scope="col">Cidade</th>
-                <th scope="col">Bairro</th>
-                <th scope="col">Rua</th>
-                <th scope="col">Número</th>
-                <th scope="col">Finalizar Serviço</th>             
-            </tr>
             @foreach ($pedidos as $item)
              @if($item->status==1)
             <tr>

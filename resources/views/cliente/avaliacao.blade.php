@@ -2,18 +2,20 @@
 @section('content')
 
 <div class="container">
-
-        <table class=" table table-borderless table-dark">  
-        
-                <tbody>
-                        <tr>
+        <h1 id="h1-cliente" >Avalie os trabalhos prestados</h1>
+        <table class=" table table-borderless">  
+        <thead class="table-primary">
+                <tr>
                                 <th scope="col">Profissional</th>
                                 <th scope="col">Telefone</th>
                                 <th scope="col">Celular</th>                            
-                                <th scope="col">Profissao</th>                               
+                                <th scope="col">Profissão</th>                               
                                 <th scope="col">Status</th>                               
-                               
-                            </tr>
+                                       
+                </tr>
+        </thead>
+                <tbody>
+        
                             @foreach ($pedidos as $item)
                             @if($item->status==1||$item->status==2)
                                 <tr>

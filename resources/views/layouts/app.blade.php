@@ -28,7 +28,7 @@
 
     <div id="app">        
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-        <img id="myImg" height="160" src="{{ URL::to('/img/logo.png') }}">
+        <img id="myImg" class="logo" height="160" src="{{ URL::to('/img/logo.png') }}">
             <div class="container">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">
@@ -42,7 +42,7 @@
                     </ul>
 
                     <!-- Right Side Of Navbar -->
-                    <ul class="navbar-nav ml-auto">
+                    <ul class="nav nav-pills">
                         <!-- Authentication Links -->
                         @guest
                         <li class="nav-item">
@@ -50,39 +50,42 @@
                         </li>
                         <li class="nav-item">
                             @if (Route::has('register'))
-                            <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                            <a class="nav-link" href="{{ route('register') }}">{{ __('Cadastrar-se') }}</a>
                             @endif
                         </li>
                         @else
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true"
-                                aria-expanded="false" v-pre>
-                                {{ Auth::user()->name }} <span class="caret"></span>
-                            </a>
+                        <div class="btn-group editar">
+                            <button type="button" class="btn btn-primary dropdown-toggle btn-editar" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                              {{ Auth::user()->name }} <span class="caret"></span>
+                            </button>
+                           
+                            
                             @if(Auth::user()->tipo==2)
                             @if(Auth::user()->autonomo!="")
-                            <div class="foto">
-                                <img class="foto" src="{{ url("storage/imagens/".Auth::user()->autonomo->foto)}}" alt="{{Auth::user()->autonomo->foto}}"  />
-                            </div>
+                             <div class="foto">
+                                    <img class="foto" src="{{ url("storage/imagens/".Auth::user()->autonomo->foto)}}" alt="{{Auth::user()->autonomo->foto}}"  />
+                                </div>
+                            
                             @endif
                             @endif
                            
+                           
                             
-                            <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                            <div class="dropdown-menu dropdown-menu editar" aria-labelledby="navbarDropdown">
 
 
 
                                 @if(Auth::user()->tipo==1)
-                                <a class="dropdown-item" href="/cliente/cadastro">{{ __('edtar perfil') }}</a>
+                                <a class="dropdown-item" href="/cliente/cadastro">{{ __('Editar Perfil') }}</a>
                                 @else
-                                <a class="dropdown-item" href="/autonomo/cadastro">{{ __('edtar perfil') }}</a>
+                                <a class="dropdown-item" href="/autonomo/cadastro">{{ __('Editar Perfil') }}</a>
                                 @endif
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
                                     @csrf
                                 </form>
                                 <a class="dropdown-item" href="{{ route('logout') }}" onclick="event.preventDefault();
                                                      document.getElementById('logout-form').submit();">
-                                    {{ __('Logout') }}
+                                    {{ __('Sair') }}
                                 </a>
                             </div>
                            
@@ -97,18 +100,18 @@
         </nav>
         @if(Auth::check())
         @if(Auth::user()->tipo==1)
-        <div class="container-fluid menu">
+        <div class="container-fluid menu sticky-top">
             <script type="text/javascript" src="<?php echo asset('js/acao.js')?>"></script>
         <nav class="navbar navbar-expand-lg navbar-expand-xs">
             <a class="navbar-brand" href="\home">Home</a>    
             <a class="navbar-brand" href="\cliente\informacao">Informações</a> 
             <a class="navbar-brand" href="\cliente\solicitacao">Solicitações</a>    
-            <a class="navbar-brand" href="\cliente\avaliacao">Avaliar Serviços prestados</a>    
+            <a class="navbar-brand" href="\cliente\avaliacao">Avaliação</a>    
             <a class="navbar-brand" href="#">Buscar</a>    
           </nav>
         </div>
         @else
-        <div class="container-fluid menu">
+        <div class="container-fluid menu sticky-top">
             <nav class="navbar navbar-expand-lg navbar-expand-xs">
                 <a class="navbar-brand" href="\home">Home</a>    
                 <a class="navbar-brand" href="\autonomo\informacao">Informações</a>    
@@ -128,7 +131,10 @@
     
       
     </div>
-    <footer class="rodape navbar-fixed-bottom" >Aqui vai o rodapé</footer>
+    <footer class="rodape navbar-fixed-bottom" >©Copyright 2018 Fernando, Jessica, Diego, Jhonatan e Jocivania. Todos os direitos reservados.
+        <img id="myImg" class="instagram" height="32" src="{{ URL::to('/img/instagram.png') }}">
+        <img id="myImg" class="facebook" height="50" src="{{ URL::to('/img/facebook.png') }}">
+    </footer>
 </body>
 
 </html>

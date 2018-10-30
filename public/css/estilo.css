@@ -2,28 +2,51 @@
     position: relative;
 }
 
+/* cadastro */
+.form-cadastro{
+    margin-top: 5%;
+}
+
+/* tela de cadastro */
+.nav-link { /*login/cadastro */
+    color: #000080; 
+    font-size: 13pt;
+}
+.form-cadastro {
+    margin-top: 3%;
+}
+
+/* header */
+.logo {
+    margin-left: 70px;
+}
+
+.btn-editar {
+    margin-top: 20px;
+    height: 50px;
+    margin-left: 250px;
+}
+
+.editar {
+    margin-bottom: 50%;
+}
+
 .menu{   
-    background-color: #00CED1; 
-    color: red;
+    background-color: #ADD8E6; 
     -webkit-box-shadow: inset 0 6px 6px -7px  black;  
     -moz-box-shadow: inset 0 6px 6px -7px  black;  
     box-shadow: inset 0 6px 6px -7px  black; 
-    
-
 }
 
-.teste {
-    margin-top: 20%;
-}
- 
 .foto {
-    width: 100px;
-    height: 100px;
-    border-radius: 200px
+    width: 80px;
+    height: 80px;
+    border-radius: 200px;
+    margin-left: 10px;
 }
 
 .menu nav{
-    background-color: #00CED1;
+    background-color: #ADD8E6;
     -webkit-box-shadow: inset 0 6px 6px -7px  black;  
     -moz-box-shadow: inset 0 6px 6px -7px  black;  
     box-shadow: inset 0 6px 6px -7px  black;  
@@ -31,25 +54,57 @@
 }
 
 .navbar-laravel {
-    background: #87CEFF; 
+    background: #F5F5F5; 
 }
 
 .menu nav a{
 color: #473C8B;
 }
 
-.menu nav a:hover{
-    color: white;
+.menu nav a:hover{ 
+    color: black;
     -webkit-transition: 1s; /* Safari */
     transition:  0.5s;
 }
 
+/* home cliente */
+.h1-homeCliente {
+    margin-top: 20px;
+    text-align: center;
+    font-family: 'Gotham', sans-serif;
+}
+
+.margin-foto {
+    width: 80px;
+    height: 80px;
+    border-radius: 200px;
+    margin-top: 20%;
+}
+
+/* cliente */
+h1#h1-cliente {
+    font-size: 20pt;
+    margin-top: 1%;
+    font-family: 'Gotham', sans-serif;
+    text-align: center;
+}
+
+/* autonomo */
+h1#h1-autonomo {
+    font-size: 20pt;
+    margin-top: 1%;
+    font-family: 'Gotham', sans-serif;
+    text-align: center;
+}
+
+/* footer */
 .rodape{
-    background: #87CEFF;
-    height: 50px;
+    color: #fff;
+    background: #696969;
+    height: 60px;
     text-align: center;
     padding-top: 8px;
-    top: 105%;   
+    top: 150%;   
     width:100%;
     -webkit-box-shadow: inset 0 6px 6px -7px  black;  
     -moz-box-shadow: inset 0 6px 6px -7px  black;  
@@ -57,5 +112,13 @@ color: #473C8B;
     position: absolute;
     bottom:0;
  
+}
+
+.facebook{
+    margin-left: 1%;
+}
+
+.instagram{
+    margin-left: 49%;
 }
 

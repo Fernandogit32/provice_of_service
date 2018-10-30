@@ -9,7 +9,7 @@
     
 
     <div class="container">
-        @if (count($errors) > 0)
+        @if (count($errors) > 0) 
         <div class="alert alert-danger">
             <ul>
                 @foreach ($errors->all() as $error)
@@ -22,7 +22,7 @@
     </div>  
     
 <div class="container">
-        <form action="cadastrar" method="post" enctype="multipart/form-data">
+        <form class="form-cadastro" action="cadastrar" method="post" enctype="multipart/form-data">
             {{ csrf_field() }}
             
             <h1>Contatos</h1>
@@ -35,13 +35,15 @@
                 <label>Celular</label>
                 <input type="tel" name="celular" id="celular" class="form-control" value="{{Auth::user()->autonomo->celular}}" placeholder=" Celular">
             </div>
+            <hr>
+            <h1>Serviços</h1>
             <div class="form-group">
                 <label>Profissão</label>
                 <input type="Text" name="profissao" class="form-control" value="{{Auth::user()->autonomo->profissao}}" placeholder="Digite a sua Área">
             </div>
             <div class="form-group">
                 <label>Descrição</label>
-                <textarea cols=155 name="descricao" rows="5" name="opiniao" maxlength="500" wrap="hard" placeholder="Escreva uma descrição dos serviços que voçê faz">{{Auth::user()->autonomo->descricao}}</textarea>
+                <textarea cols=155 name="descricao" rows="5" name="opiniao" maxlength="500" wrap="hard" placeholder="Escreva uma descrição dos serviços que você faz">{{Auth::user()->autonomo->descricao}}</textarea>
             </div>
             <div class="form-group">
                 <label>Foto de Perfil</label><br />
@@ -62,7 +64,7 @@
             </div>
             <div class="form-group">
                 <label>Descrição</label>
-                <textarea cols=155 name="descricao" rows="5" name="opiniao" maxlength="500" wrap="hard" placeholder="Escreva uma descrição dos serviços que voçê faz"></textarea>
+                <textarea cols=155 name="descricao" rows="5" name="opiniao" maxlength="500" wrap="hard" placeholder="Escreva uma descrição dos serviços que você faz"></textarea>
             </div>
             <div class="form-group">
                     <label>Foto de Perfil</label><br />
