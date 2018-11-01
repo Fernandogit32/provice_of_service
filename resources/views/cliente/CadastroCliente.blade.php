@@ -19,7 +19,8 @@
         </div>
         
         @endif
-
+        
+   
         <form class="form-cadastro" action="cadastrar" method="post">
             {{ csrf_field() }}
             <h1>Contatos</h1>
@@ -94,6 +95,8 @@
     </div>
     <button type="submit" class="btn btn-primary">Confirmar</button>
     </form>
+
+</div>
 
 </div>
 @endif 

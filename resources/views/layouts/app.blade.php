@@ -121,7 +121,7 @@
             </div>
           @endif
           @endif
-       
+          <div class="espacoMin">     
           
         
        
@@ -129,6 +129,8 @@
            
         
     
+      
+    </div>
       
     </div>
     <footer class="rodape navbar-fixed-bottom" >©Copyright 2018 Fernando, Jessica, Diego, Jhonatan e Jocivania. Todos os direitos reservados.
