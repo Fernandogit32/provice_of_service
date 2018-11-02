@@ -16,7 +16,7 @@
         </thead>
                 <tbody>
                             @foreach ($pedidos as $item)
-                            @if($item->status==0||$item->status==3)
+                            @if($item->status==0||$item->status==1||$item->status==3)
                                 <tr>
                                     <td>
                                             {{$item->autonomo->user->name}} 
@@ -41,9 +41,12 @@
                                             <input name="id" value="{{$item->id}}" type="hidden"/>
                                         <button type="submit" class="btn btn-danger">Excluir Pedido</button>
                                         </form>
+                                        @elseif($item->status==1)
+                                       <label>Serviço em curso</label>
                                         @else
                                         <label>Aguardando a confirmação</label>
-                                        @endif                                                     
+                                        @endif   
+
                                     </td>
                                                                     
                                  </tr>

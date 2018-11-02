@@ -1,3 +1,5 @@
+
+
 .corpo {
     position: relative;
     
@@ -199,4 +201,16 @@ h1#h1-autonomo {
     background-position: bottom;
     background-position-x: 99%;
     
+}
+
+.formAvaliação{
+    margin-bottom:0px;
+    margin-left:16px;
+    border:2px solid green;
+    -moz-border-radius:8px;
+    -webkit-border-radius:8px;	
+    border-radius:8px;	
+    background-color:#CCC;
+    max-width:500px;
+    padding:16px;	
 }

@@ -14,10 +14,11 @@
                                        
                 </tr>
         </thead>
+        <?php if(isset($pedidos)){ ?>
                 <tbody>
         
                             @foreach ($pedidos as $item)
-                            @if($item->status==1||$item->status==2)
+                            @if($item->status==2)
                                 <tr>
                                     <td>
                                             {{$item->autonomo->user->name}} 
@@ -34,12 +35,14 @@
                                             {{$item->autonomo->profissao}} 
                                     </td> 
                                     <td>
-                                            @if($item->status==1)
-                                            {{'Serviço em curso'}}
-                                            @else
-                                            <form action="#"></form>
+                                           
+                                            
+                                            <form action="frmAvaliar/{id}" method="get">
+                                            <input name="id" value="{{$item->autonomo->id}}" type="hidden"/> 
                                             <input type="submit" class="btn btn-primary" value="Avaliar">
-                                            @endif
+                                            </form>
+                                          
+                                          
                                     </td>                                                     
                                                                     
                                  </tr>
@@ -49,7 +52,7 @@
                                       @endif 
                             @endforeach
                 </tbody>   
-    
+        <?php }?>
     </table>
     <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
 </div>
