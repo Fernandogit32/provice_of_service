@@ -41,8 +41,8 @@
 .foto {
     width: 80px;
     height: 80px;
-    border-radius: 200px;
-    margin-left: 10px;
+    border-radius: 100px;
+    margin-left: 5px;
 }
 
 .menu nav{
@@ -68,8 +68,16 @@ color: #473C8B;
 }
 
 /* home cliente */
-.h1-homeCliente {
+.icones {
     margin-top: 20px;
+}
+
+.icones label {
+    text-align: center;
+    margin-left: 100px;
+}
+
+.h1-homeCliente {
     text-align: center;
     font-family: 'Gotham', sans-serif;
 }

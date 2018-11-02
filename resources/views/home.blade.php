@@ -6,6 +6,11 @@
     $limite=0; 
     $linha=0;   
     ?>
+<div class="icones" >
+<label><img id="myImg" class="" height="50" src="{{ URL::to('/img/lupa.png') }}"><br /><strong> Procure o melhor profissional</strong><br /> Procure os mais qualificados entre<br /> diaristas, eletricistas, mecânicos, etc</label>
+<label><img id="myImg" class="" height="50" src="{{ URL::to('/img/joia.png') }}"><br /><strong>Escolha o que você quer</strong><br />Pegue o contato do profissional<br /> escolhido e negocie diretos com eles. </label>
+<label><img id="myImg" class="" height="30" src="{{ URL::to('/img/estrelas.png') }}"><br /><strong>Avalie o profissional</strong><br />Dê uma nota para seu trabalho<br /> e uma breve descrição dos serviços prestados. </label>
+</div>
 
 <h1 class="h1-homeCliente" >Aqui você encontra os melhores profissionais.</h1> 
   

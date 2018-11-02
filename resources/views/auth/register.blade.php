@@ -62,10 +62,15 @@
                         </div>
                         <div class="form-group row">
                             <label for="Tipo" class="col-md-4 col-form-label text-md-right">{{ __('Tipo') }}</label>
+                            {{-- <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                                <label class="btn btn-secondary active">
+                                  <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
+                                </label> --}}
+                              
 
-                            <div class="col-md-6">
-                              <label>Cliente <input id="tipo" type="radio" value="1" class="form-control{{ $errors->has('tipo') ? ' is-invalid' : '' }}" name="tipo" value="{{ old('tipo') }}" required></label>  
-                              <label>Profissional <input id="tipo" type="radio" value="2" class="form-control{{ $errors->has('tipo') ? ' is-invalid' : '' }}" name="tipo" value="{{ old('tipo') }}" required></label> 
+                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
+                              <label class="btn btn-secondary active" >Cliente <input id="tipo" type="radio" value="1" class="form-control{{ $errors->has('tipo') ? ' is-invalid' : '' }}" name="tipo" value="{{ old('tipo') }}" autocomplete="off" required></label>  
+                              <label class="btn btn-secondary active">Profissional <input id="tipo" type="radio" value="2" class="form-control{{ $errors->has('tipo') ? ' is-invalid' : '' }}" name="tipo" value="{{ old('tipo') }}" autocomplete="off" required></label> 
 
                                 @if ($errors->has('tipo'))
                                     <span class="invalid-feedback" role="alert">
