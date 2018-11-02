@@ -14,6 +14,7 @@
                                        
                 </tr>
         </thead>
+        <?php if(isset($pedidos)){ ?>
                 <tbody>
         
                             @foreach ($pedidos as $item)
@@ -49,7 +50,7 @@
                                       @endif 
                             @endforeach
                 </tbody>   
-    
+        <?php }?>
     </table>
     
 </div>

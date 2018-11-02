@@ -42,8 +42,13 @@ class PedidoController extends Controller
   }
 
   function formAvaliacao(){
-    $pedidos = Pedido::all();
-    return view('Cliente/avaliacao')->with('pedidos',$pedidos);
+    if(Auth::user()->cliente->pedidos!=null){
+      $pedidos = Auth::user()->cliente->pedidos;
+      return view('Cliente/avaliacao')->with('pedidos',$pedidos);
+    }else{
+      return view('Cliente/avaliacao');
+    }
+   
   }
   function finalizarServico(request $request){
     $pedido = Pedido::find($request->id);
