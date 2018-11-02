@@ -18,7 +18,7 @@
                 <tbody>
         
                             @foreach ($pedidos as $item)
-                            @if($item->status==1||$item->status==2)
+                            @if($item->status==2)
                                 <tr>
                                     <td>
                                             {{$item->autonomo->user->name}} 
@@ -35,12 +35,11 @@
                                             {{$item->autonomo->profissao}} 
                                     </td> 
                                     <td>
-                                            @if($item->status==1)
-                                            {{'Serviço em curso'}}
-                                            @else
+                                           
+                                            
                                             <form action="#"></form>
                                             <input type="submit" class="btn btn-primary" value="Avaliar">
-                                            @endif
+                                          
                                     </td>                                                     
                                                                     
                                  </tr>
