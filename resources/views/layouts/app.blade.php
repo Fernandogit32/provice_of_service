@@ -96,8 +96,8 @@
                   
                 </div>
             </div>        
-          
         </nav>
+        
         @if(Auth::check())
         @if(Auth::user()->tipo==1)
         <div class="container-fluid menu sticky-top">
@@ -121,7 +121,9 @@
             </div>
           @endif
           @endif
-          <div class="espacoMin">     
+          
+          <div class="espacoMin">    
+            
           
         
        
@@ -129,7 +131,7 @@
            
         
     
-      
+        
     </div>
       
     </div>

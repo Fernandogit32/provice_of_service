@@ -1,13 +1,14 @@
 @extends('layouts.app')
-
+<div class="logo-fundo">
+<div class="doutora">
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card form-cadastro">
-                <div class="card-header">{{ __('Registrar-se') }}</div>
+            <div class="card form-cadastro borda-cadastro">
+                <div class="card-header titulo-registrar">{{ __('Registrar-se') }}</div>
 
-                <div class="card-body">
+                <div class="card-body registro">
                     <form method="POST" action="{{ route('register') }}">
                         @csrf
 
@@ -61,16 +62,16 @@
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="Tipo" class="col-md-4 col-form-label text-md-right">{{ __('Tipo') }}</label>
+                            <label for="Tipo" class="col-md-4 col-form-label text-md-right">{{ __('Tipo de Cadastro') }}</label>
                             {{-- <div class="btn-group btn-group-toggle" data-toggle="buttons">
                                 <label class="btn btn-secondary active">
                                   <input type="radio" name="options" id="option1" autocomplete="off" checked> Active
                                 </label> --}}
                               
 
-                            <div class="btn-group btn-group-toggle" data-toggle="buttons">
-                              <label class="btn btn-secondary active" >Cliente <input id="tipo" type="radio" value="1" class="form-control{{ $errors->has('tipo') ? ' is-invalid' : '' }}" name="tipo" value="{{ old('tipo') }}" autocomplete="off" required></label>  
-                              <label class="btn btn-secondary active">Profissional <input id="tipo" type="radio" value="2" class="form-control{{ $errors->has('tipo') ? ' is-invalid' : '' }}" name="tipo" value="{{ old('tipo') }}" autocomplete="off" required></label> 
+                            <div class="btn-group btn-group-toggle col-md-6" data-toggle="buttons">
+                              <label class="btn btn-success tipo" >Cliente <input id="tipo" type="radio" value="1" class="form-control{{ $errors->has('tipo') ? ' is-invalid' : '' }}" name="tipo" value="{{ old('tipo') }}" autocomplete="off" required></label>  
+                              <label class="btn btn-success tipo">Profissional <input id="tipo" type="radio" value="2" class="form-control{{ $errors->has('tipo') ? ' is-invalid' : '' }}" name="tipo" value="{{ old('tipo') }}" autocomplete="off" required></label> 
 
                                 @if ($errors->has('tipo'))
                                     <span class="invalid-feedback" role="alert">
@@ -81,8 +82,8 @@
                         </div>
 
 
-                        <div class="form-group row mb-0">
-                            <div class="col-md-6 offset-md-4">
+                        <div class="form-group row mb-0 btn-registrar">
+                            <div class="col-md-7 offset-md-4">
                                 <button type="submit" class="btn btn-primary">
                                     {{ __('Registrar') }}
                                 </button>
@@ -93,5 +94,7 @@
             </div>
         </div>
     </div>
+</div>
+</div>
 </div>
 @endsection

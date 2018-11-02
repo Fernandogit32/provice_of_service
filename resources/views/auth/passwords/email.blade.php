@@ -1,13 +1,14 @@
 @extends('layouts.app')
-
+<div class="logo-fundo">
+<div class="confuso"> 
 @section('content')
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card form-cadastro">
-                <div class="card-header">{{ __('Redefinir Senha') }}</div>
+            <div class="card form-cadastro borda-cadastro">
+                <div class="card-header titulo-login">{{ __('Redefinir Senha') }}</div>
 
-                <div class="card-body">
+                <div class="card-body login">
                     @if (session('status'))
                         <div class="alert alert-success" role="alert">
                             {{ session('status') }}
@@ -43,5 +44,7 @@
             </div>
         </div>
     </div>
+</div>
+</div>
 </div>
 @endsection

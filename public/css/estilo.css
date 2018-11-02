@@ -1,5 +1,6 @@
 .corpo {
     position: relative;
+    
 }
 
 /* cadastro */
@@ -14,6 +15,35 @@
 }
 .form-cadastro {
     margin-top: 3%;
+    
+}
+.borda-cadastro {
+    border: 2px solid #1E90FF;
+}
+.titulo-registrar {
+    text-align: center;
+    font-size: 13pt;
+    font-weight: bold;
+}
+.registro {
+    font-family: 'gotham', sans-serif;
+}
+.titulo-login {
+    text-align: center;
+    font-size: 13pt;
+    font-weight: bold;
+}
+.login {
+    font-family: 'gotham', sans-serif;
+}
+.tipo {
+    background-color: #E0FFFF;
+    border:none;
+    color: black;
+
+}
+.btn-registrar {
+    margin-top: 20px;
 }
 
 /* header */
@@ -32,7 +62,7 @@
 }
 
 .menu{   
-    background-color: #ADD8E6; 
+    background-color: rgba(55, 32, 10, 0.5); 
     -webkit-box-shadow: inset 0 6px 6px -7px  black;  
     -moz-box-shadow: inset 0 6px 6px -7px  black;  
     box-shadow: inset 0 6px 6px -7px  black; 
@@ -45,17 +75,17 @@
     margin-left: 5px;
 }
 
-.menu nav{
+/* .menu nav{
     background-color: #ADD8E6;
     -webkit-box-shadow: inset 0 6px 6px -7px  black;  
     -moz-box-shadow: inset 0 6px 6px -7px  black;  
-    box-shadow: inset 0 6px 6px -7px  black;  
+    box-shadow: inset 0 6px 6px -7px  black; 
    
-}
+} */
 
-.navbar-laravel {
+/* .navbar-laravel {
     background: #F5F5F5; 
-}
+} */
 
 .menu nav a{
 color: #473C8B;
@@ -132,6 +162,41 @@ h1#h1-autonomo {
 .espacoMin{
     min-height:580px;
     display: block;
+}
+.teste {
+    background: url('../img/mecanico.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 320px;
+    background-position-x: 95%;
+}
+.doutora {
+    background: url('../img/advogada.png');
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-size: 400px;
+    background-position-x: 1%;
+}
+.logo-fundo {
+    background: url('../img/logo-fundo.png');
+    background-size: 2000px;
+    background-repeat: no-repeat;
+    background-position: center;
     
 }
-
+.confuso {
+    background: url('../img/confuso.png');
+    background-size: 830px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-position-x: 1%;
+    
+}
+.super {
+    background: url('../img/super.png');
+    background-size: 450px;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    background-position-x: 99%;
+    
+}

@@ -1,14 +1,15 @@
 @extends('layouts.app')
+<div class="logo-fundo">
+<div class="teste">    
 
 @section('content')
-{{-- <img id="myImg" class="doutora" height="500" src="{{ URL::to('/img/doutora.png') }}"> --}}
 <div class="container">
     <div class="row justify-content-center">
         <div class="col-md-8">
-            <div class="card form-cadastro">
-                <div class="card-header">{{ __('Login') }}</div>
+            <div class="card form-cadastro borda-cadastro ">
+                <div class="card-header titulo-login">{{ __('Login') }}</div>
 
-                <div class="card-body">
+                <div class="card-body login">
                     <form class="" method="POST" action="{{ route('login') }}">
                         @csrf
 
@@ -69,5 +70,7 @@
             </div>
         </div>
     </div>
+</div>
+</div>
 </div>
 @endsection
