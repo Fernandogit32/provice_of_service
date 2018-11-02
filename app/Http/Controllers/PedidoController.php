@@ -50,6 +50,12 @@ class PedidoController extends Controller
     }
    
   }
+
+function formAvaliar(request $request){ 
+  
+  return view('Cliente/avaliar')->with('autonomo',Autonomo::find( $request->id));
+}
+
   function finalizarServico(request $request){
     $pedido = Pedido::find($request->id);
     $pedido->status =2;

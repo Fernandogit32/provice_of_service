@@ -37,8 +37,11 @@
                                     <td>
                                            
                                             
-                                            <form action="#"></form>
+                                            <form action="frmAvaliar/{id}" method="get">
+                                            <input name="id" value="{{$item->autonomo->id}}" type="hidden"/> 
                                             <input type="submit" class="btn btn-primary" value="Avaliar">
+                                            </form>
+                                          
                                           
                                     </td>                                                     
                                                                     

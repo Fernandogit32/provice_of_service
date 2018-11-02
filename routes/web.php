@@ -28,7 +28,8 @@ Route::group(['prefix' => 'cliente','middleware'=>'auth.User'], function () {
     Route::post('/pedir', 'PedidoController@pedir');  
     Route::delete('/excluir', 'PedidoController@excluir');  
     Route::get('/solicitacao', 'PedidoController@formSolicitacao')->middleware('auth.Cliente');      
-    Route::get('/avaliacao', 'PedidoController@formAvaliacao')->middleware('auth.Cliente');      
+    Route::get('/avaliacao', 'PedidoController@formAvaliacao')->middleware('auth.Cliente'); 
+    Route::get('/frmAvaliar/{id}', 'PedidoController@formAvaliar');       
     
 });
 
