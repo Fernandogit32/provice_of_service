@@ -41,6 +41,18 @@
         <textarea cols=56 name="descricao" rows="5"  maxlength="500" wrap="hard" placeholder="Explique com um breve resumo qual o serviço que você deseja"></textarea>
     </div>
     <input type="submit" class="btn btn-primary" value="Enviar Pedido">
-</form>
+</form><br/>
+
+<h1>Comentários</h1>
+@foreach ($autonomo->pedidos as $key => $value)
+      @if ($value->status==4)
+      <div class="card-header"><strong>cliente: {{$value->cliente->user->name}} : </strong> {{$value->comentario}}</div>
+    
+     @endif
+@endforeach
+<br />
+
+
+ 
 </div>
  @endsection
