@@ -102,7 +102,7 @@
         @if(Auth::user()->tipo==1)
         <div class="container-fluid menu sticky-top">
             <script type="text/javascript" src="<?php echo asset('js/acao.js')?>"></script>
-        <nav class="navbar navbar-expand-lg navbar-expand-xs">
+        <nav class="navbar navbar-expand-md navbar-expand-lg navbar-expand-xs">
             <a class="navbar-brand" href="\home">Home</a>    
             <a class="navbar-brand" href="\cliente\informacao">Informações</a> 
             <a class="navbar-brand" href="\cliente\solicitacao">Solicitações</a>    
