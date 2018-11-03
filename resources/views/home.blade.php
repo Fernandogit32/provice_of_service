@@ -23,6 +23,10 @@
         <br/> <label><strong>Nome: </strong>{{$autonomo->user->name}}</label>
         <br/> <label><strong>Profissão: </strong>{{$autonomo->profissao}}</label>
         <br/> <label><strong>Descrição: </strong>{{$autonomo->descricao}}</label><br />
+        <label><strong>Media de Avaliação </strong>@if($autonomo->media==0) {{0}} @else {{$autonomo->media}}@endif</label><br />
+        <label><strong>N° de avaliações</strong>         
+        </label><br />
+
         <form  method="GET" action="cliente/pedido">
             <button type="submit"  name="pedido" value="{{$autonomo->id}}" class="btn btn-success">Solicitar</button>
         </form>

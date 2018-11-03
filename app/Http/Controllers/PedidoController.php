@@ -11,37 +11,37 @@ use App\Http\Requests\PedidoRequest;
 
 class PedidoController extends Controller
 {
-    function formPedido(request $request){
+function formPedido(request $request){
      $autonomo = Autonomo::find($request->pedido);
      
        return view('cliente/ficha_de_pedido')->with('autonomo',$autonomo);
    }
 
-   function pedir(PedidoRequest $request){            
+  function pedir(PedidoRequest $request){            
           Pedido::create(['descricao'=>$request->descricao,'status'=>0,
           'cliente_id'=>Auth::user()->cliente->id,'autonomo_id'=> $request->id_autonomo]);
           return redirect()->action('HomeController@index');     
    }
 
-   function formSolicitacao(){   
+  function formSolicitacao(){   
      $pedidos = Auth::user()->cliente->pedidos;
       return view('Cliente/solicitacao')->with('pedidos',$pedidos);
   }
 
-  function gerarSevico(request $request){
+function gerarSevico(request $request){
     $pedido = Pedido::find($request->id);
     $pedido->status =1;
     $pedido->save();
     return redirect()->action('HomeController@index');  
   }
-  function cancelarPedido(request $request){
+function cancelarPedido(request $request){
     $pedido = Pedido::find($request->id);
     $pedido->status =3;
     $pedido->save();
     return redirect()->action('HomeController@index');  
   }
 
-  function formAvaliacao(){
+function formAvaliacao(){
     if(Auth::user()->cliente->pedidos!=null){
       $pedidos = Auth::user()->cliente->pedidos;
       return view('Cliente/avaliacao')->with('pedidos',$pedidos);
@@ -53,19 +53,30 @@ class PedidoController extends Controller
 
 function formAvaliar(request $request){ 
   
-  return view('Cliente/avaliar')->with('autonomo',Autonomo::find( $request->id));
+  return view('Cliente/avaliar')->with('autonomo',Autonomo::find( $request->id))->with('pedido',Pedido::find($request->id_ped));
 }
 
-  function finalizarServico(request $request){
+function finalizarServico(request $request){
     $pedido = Pedido::find($request->id);
     $pedido->status =2;
     $pedido->save();
     return redirect()->action('HomeController@index');  
   }
-  function excluir(request $request){
+
+function excluir(request $request){
      $pedido = Pedido::find($request->id);
      $pedido->delete();
      return redirect()->action('HomeController@index');
   }
+
+function avaliar(request $request){
+   $pedido= Pedido::find($request->id_pedido);
+   $autonomo = Autonomo::find($request->id);  
+   $autonomo->media = ($autonomo->media + $request->nota)/count($autonomo->pedidos);   
+   $pedido->status= 4;  
+   $pedido->save();
+   $autonomo->save();
+  return redirect()->action('HomeController@index');
+}  
 
 }

@@ -37,8 +37,9 @@
                                     <td>
                                            
                                             
-                                            <form action="frmAvaliar/{id}" method="get">
+                                            <form action="frmAvaliar/id/id_ped" method="get">
                                             <input name="id" value="{{$item->autonomo->id}}" type="hidden"/> 
+                                            <input name="id_ped" value="{{$item->id}}" type="hidden"/> 
                                             <input type="submit" class="btn btn-primary" value="Avaliar">
                                             </form>
                                           
@@ -54,7 +55,7 @@
                 </tbody>   
         <?php }?>
     </table>
-    <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+  
 </div>
 
 
