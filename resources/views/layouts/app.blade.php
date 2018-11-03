@@ -106,7 +106,7 @@
             <a class="navbar-brand" href="\home">Home</a>                
             <a class="navbar-brand" href="\cliente\solicitacao">Solicitações</a>    
             <a class="navbar-brand" href="\cliente\avaliacao">Avaliação</a>    
-            <a class="navbar-brand" href="#">Buscar</a>
+            <a class="navbar-brand" href="\cliente\filtro">Buscar</a>
             <a class="navbar-brand" href="\cliente\informacao">Informações</a>     
           </nav>
         </div>

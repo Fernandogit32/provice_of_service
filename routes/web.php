@@ -30,7 +30,9 @@ Route::group(['prefix' => 'cliente','middleware'=>'auth.User'], function () {
     Route::get('/solicitacao', 'PedidoController@formSolicitacao')->middleware('auth.Cliente');      
     Route::get('/avaliacao', 'PedidoController@formAvaliacao')->middleware('auth.Cliente'); 
     Route::get('/frmAvaliar/{id}/{id_ped}', 'PedidoController@formAvaliar');     
-    Route::post('/avaliar', 'PedidoController@avaliar');    
+    Route::post('/avaliar', 'PedidoController@avaliar');
+    Route::get('/filtro', 'PedidoController@formFiltro');      
+    Route::get('/filtrar', 'PedidoController@filtrar');      
     
 });
 
