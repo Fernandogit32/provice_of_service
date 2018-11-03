@@ -135,9 +135,11 @@
     </div>
       
     </div>
-    <footer class="rodape navbar-fixed-bottom" >©Copyright 2018 Fernando, Jessica, Diego, Jhonatan e Jocivania. Todos os direitos reservados.
+    <footer class="rodape navbar-fixed-bottom" > 
+        <h2 class="h2-footer" >Você é um Profissional? Consiga Clientes. <br /> Você é cliente? Encontre o profissional que você deseja.</h2>
+        <p class="p-footer"> ©Copyright 2018 Fernando, Jessica, Diego, Jhonatan e Jocivania. Todos os direitos reservados.
         <img id="myImg" class="instagram" height="32" src="{{ URL::to('/img/instagram.png') }}">
-        <img id="myImg" class="facebook" height="50" src="{{ URL::to('/img/facebook.png') }}">
+        <img id="myImg" class="facebook" height="50" src="{{ URL::to('/img/facebook.png') }}"></p>
     </footer>
 </body>
 
