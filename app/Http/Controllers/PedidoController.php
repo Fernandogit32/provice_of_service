@@ -8,6 +8,8 @@ use App\Autonomo;
 use App\Pedido;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\PedidoRequest;
+use DB;
+
 
 class PedidoController extends Controller
 {
@@ -70,11 +72,16 @@ function excluir(request $request){
   }
 
 function avaliar(request $request){
+  
+
    $pedido= Pedido::find($request->id_pedido);
-   $autonomo = Autonomo::find($request->id);  
-   $autonomo->media = ($autonomo->media + $request->nota)/count($autonomo->pedidos);   
-   $pedido->status= 4;  
-   $pedido->save();
+   $autonomo = Autonomo::find($request->id);     
+   $pedido->status= 4;
+   $pedido->comentario = $request->comentario;
+   $pedido->save(); 
+   $pedidos = DB::table('pedidos')->where('autonomo_id',$request->id)->where('status',4)->get();          
+   $autonomo->media = ($autonomo->soma+$request->nota)/count($pedidos); 
+   $autonomo->soma=  $autonomo->soma+$request->nota;
    $autonomo->save();
   return redirect()->action('HomeController@index');
 }  

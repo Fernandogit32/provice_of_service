@@ -24,8 +24,19 @@
         <br/> <label><strong>Profissão: </strong>{{$autonomo->profissao}}</label>
         <br/> <label><strong>Descrição: </strong>{{$autonomo->descricao}}</label><br />
         <label><strong>Media de Avaliação </strong>@if($autonomo->media==0) {{0}} @else {{$autonomo->media}}@endif</label><br />
-        <label><strong>N° de avaliações</strong>         
-        </label><br />
+        <label><strong>N° de avaliações</strong></label>
+
+         <?php
+         $qtd=0;
+          $pedidosDoAltonomo = $autonomo->pedidos;
+            foreach ($pedidosDoAltonomo as $key => $value) {
+              if($value->status==4){
+                $qtd= $qtd+1;
+              }
+            } 
+            echo " ".$qtd;
+             ?>       
+        
 
         <form  method="GET" action="cliente/pedido">
             <button type="submit"  name="pedido" value="{{$autonomo->id}}" class="btn btn-success">Solicitar</button>
