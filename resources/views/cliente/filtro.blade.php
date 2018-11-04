@@ -1,12 +1,17 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="container filtro">    
-    <form class="form-inline my-2 my-lg-0" action="filtrar" method="get">              
-        <input name="text" class="form-control mr-sm-2" type="search" placeholder="Buscar" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Buscar</button>
+<div class="container filtro"> 
+  <h1 class="h1-busca" >Faça a busca do profissional ideal para você</h1> 
+  <div class="form-busca">  
+    <form class="form col-md-12" action="filtrar" method="get">              
+        <input name="text" class="form-control" type="search" placeholder="Buscar..." aria-label="Search"><br />
+        <button class="btn btn-success" type="submit">Buscar</button>
       </form>
 </div>
+</div>
+
+
 
 <?php if(isset($filtrados)){ ?>
 

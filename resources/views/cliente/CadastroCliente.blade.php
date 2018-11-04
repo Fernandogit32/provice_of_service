@@ -20,21 +20,28 @@
         
         @endif
         
-   
-        <form class="form-cadastro" action="cadastrar" method="post">
+        <div class="card card-cadastro-cliente">
+        <form class="form-cadastro-cliente" action="cadastrar" method="post">
             {{ csrf_field() }}
+            <div class="card-header bg-primary header-cadastro-cliente">
             <h1>Contatos</h1>
+            </div>
+            <div class="body-cadastro-cliente">
             <div class="form-group">
                 @if(Auth::user()->cliente!=null)
                 <label>Telefone</label>
                 <input type="text" name="telefone" id="telefone" class="form-control" value="{{Auth::user()->cliente->telefone}}" placeholder="telefone">
             </div>
+            
             <div class="form-group">
                 <label>Celular</label>
                 <input type="text" name="celular" id="celular" class="form-control" value="{{Auth::user()->cliente->celular}}" placeholder=" Celular">
             </div>
-            <hr>
+            </div>
+            <div class="card-header bg-primary header-cadastro-cliente">
             <h1>Endereço</h1>
+            </div>  
+            <div class="body-cadastro-cliente">
             <div class="form-group">
                 <label>CEP</label>
                 <input name="cep" type="text" id="cep" maxlength="9" value="{{Auth::user()->cliente->endereco->cep}}" class="form-control"
@@ -59,7 +66,7 @@
            
                 <button type="submit" class="btn btn-primary">Confirmar</button>
         </form>
-
+        </div>
         @else
         <div class="form-group">
     <label>Telefone</label>
@@ -95,7 +102,8 @@
     </div>
     <button type="submit" class="btn btn-primary">Confirmar</button>
     </form>
-
+</div>
+</div>
 </div>
 
 </div>
