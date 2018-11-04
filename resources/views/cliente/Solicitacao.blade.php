@@ -1,10 +1,11 @@
 @extends('layouts.app')
 @section('content')
 
+
 <div class="container">
 <h1 id="h1-cliente">Solicitações de serviço</h1>
-        <table class="table table-borderless">  
-        <thead class="table-primary" >
+        <table class="table table-borderless table-solicitacao">  
+        <thead class="bg-primary head-solicitacao">
                 <tr>
                         <th scope="col">Profissional</th>
                         <th scope="col">Telefone</th>
@@ -51,7 +52,7 @@
                                                                     
                                  </tr>
                                   <tr style="border-bottom-style:solid">                 
-                                            <td colspan="9"><label style="color:red"><strong>Descrição:</strong></label>&nbsp&nbsp{{$item->descricao}} </td>
+                                            <td colspan="9"><label style="color:blue"><strong>Descrição:</strong></label>&nbsp&nbsp{{$item->descricao}} </td>
                                   </tr>
                                       @endif 
                             @endforeach
@@ -60,6 +61,5 @@
     </table>
     
 </div>
-
 
  @endsection

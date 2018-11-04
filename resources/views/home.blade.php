@@ -27,7 +27,7 @@
                 <label class="card-text" ><strong>Nome: </strong>{{$autonomo->user->name}}</label>
                 <br/> <label class="card-text" ><strong>Profissão: </strong>{{$autonomo->profissao}}</label>               
                 <label class="card-text" ><strong>Media de Avaliação </strong>@if($autonomo->media==0) {{0}} @else {{$autonomo->media}}@endif</label><br />
-                <label class="card-text" ><strong>N° de avaliações</strong></label><br />
+                <label class="card-text" ><strong>N° de avaliações</strong></label>
                 <?php
                 $qtd=0;
                  $pedidosDoAltonomo = $autonomo->pedidos;

@@ -3,8 +3,8 @@
 
 <div class="container">
         <h1 id="h1-cliente" >Avalie os trabalhos prestados</h1>
-        <table class=" table table-borderless">  
-        <thead class="table-primary">
+        <table class=" table table-borderless table-avaliacao">  
+        <thead class="bg-primary head-avaliacao">
                 <tr>
                                 <th scope="col">Profissional</th>
                                 <th scope="col">Telefone</th>

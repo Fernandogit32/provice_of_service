@@ -1,7 +1,7 @@
 @extends('layouts.app')
 @section('content')
 <div class="container">
-        <div class="container">
+        
                 @if (count($errors) > 0)
                 <div class="alert alert-danger">
                     <ul>
@@ -11,42 +11,48 @@
                     </ul>
                 </div>
                 @endif
-    <h1>Informações do Profissional
-        <h1>
-            <table class="table table-borderless table-dark">
-                <tbody>
+  
+            <table class="table table-hover table-light table-pedido">
+                    <thead>
+                            <tr>
+                              <th class="head-pedido" scope="col-md-5">Informações do Profissional</th>
+                            </tr>
+                          </thead>
+                <tbody class="body-pedido" >
                     <tr>
-                        <td>Nome: {{$autonomo->user->name}}</td>
+                        <td><strong>Nome: </strong>{{$autonomo->user->name}}</td>
                     </tr>
                     <tr>
-                        <td>Profissão: {{$autonomo->profissao}}</td>
+                        <td><strong>Profissão: </strong>{{$autonomo->profissao}}</td>
                     </tr>
                     <tr>
-                        <td>Telefone: {{$autonomo->telefone}}</td>
+                        <td><strong>Telefone: </strong>{{$autonomo->telefone}}</td>
                     </tr>
                     <tr>
-                        <td>Celular: {{$autonomo->celular}}</td>
+                        <td><strong>Celular: </strong>{{$autonomo->celular}}</td>
                     </tr>
                     <tr>
-                        <td>Descrição: {{$autonomo->descricao}}</td>
+                        <td><strong>Descrição: </strong>{{$autonomo->descricao}}</td>
                     </tr>                     
                 </tbody>
             </table>
             
 <form action="pedir" method="POST">
         {{ csrf_field()}}
-    <div class="form-group">
-        <label>Escreva uma descrição do serviço esperado</label><br/>
+    <div class="form-group descricao-pedido">
+        <label class="label-pedido" ><strong>Escreva uma descrição do serviço esperado</strong></label><br/>
         <input name="id_autonomo" value="<?php echo $_GET['pedido'];?>" type="hidden"/>           
-        <textarea cols=56 name="descricao" rows="5"  maxlength="500" wrap="hard" placeholder="Explique com um breve resumo qual o serviço que você deseja"></textarea>
+        <textarea class="form-control" cols=130 name="descricao" rows="5"  maxlength="500" wrap="hard" placeholder="Explique com um breve resumo qual o serviço que você deseja."></textarea><br />
+        <input type="submit" class="btn btn-primary btn-pedido" value="Enviar Pedido">
     </div>
-    <input type="submit" class="btn btn-primary" value="Enviar Pedido">
+    
 </form><br/>
 
-<h1>Comentários</h1>
+<h1 class="h1-pedido" >Comentários</h1>
 @foreach ($autonomo->pedidos as $key => $value)
       @if ($value->status==4)
-      <div class="card-header"><strong>cliente: {{$value->cliente->user->name}} : </strong> {{$value->comentario}}</div>
+      <div class="card">
+      <div class="card-body card-pedido"><strong>Cliente - {{$value->cliente->user->name}} : </strong> {{$value->comentario}}</div></div>
     
      @endif
 @endforeach
