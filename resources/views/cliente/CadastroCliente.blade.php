@@ -16,7 +16,7 @@
                 @endforeach
             </ul>
         </div>
-        </div>
+       
         
         @endif
         
@@ -102,6 +102,7 @@
     </div>
     <button type="submit" class="btn btn-primary">Confirmar</button>
     </form>
+</div>
 </div>
 </div>
 </div>
