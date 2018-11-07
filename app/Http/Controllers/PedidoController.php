@@ -8,6 +8,7 @@ use App\Autonomo;
 use App\Pedido;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Requests\PedidoRequest;
+use App\Http\Requests\AvaliacaoRequest;
 use DB;
 
 
@@ -83,7 +84,7 @@ class PedidoController extends Controller
     return redirect()->action('HomeController@index');
   }
 
-  function avaliar(request $request)
+  function avaliar(AvaliacaoRequest $request)
   {
 
 

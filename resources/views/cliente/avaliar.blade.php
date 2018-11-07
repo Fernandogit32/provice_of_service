@@ -1,12 +1,25 @@
 @extends('layouts.app')
 @section('content')
 
+<div class="corpo"> 
 
-<div class="container">
+
 
 
                 <fieldset class="formAvaliação">
                         <legend>Avaliar</legend>
+                        <div class="container">
+                                @if (count($errors) > 0)
+                                <div class="alert alert-danger">
+                                    <ul>
+                                        @foreach ($errors->all() as $error)
+                                        <li>{{ $error }}</li>
+                                        @endforeach
+                                    </ul>
+                                </div>
+                               
+                                
+                                @endif
                                 <label><img class="margin-foto" src="{{ url("storage/imagens/".$autonomo->foto)}}" alt="{{$autonomo->foto}}"/></label><br />
                 <label><strong>Nome:</strong> {{$autonomo->user->name}}</label><br />
                 <form action="/cliente/avaliar" method="POST">
