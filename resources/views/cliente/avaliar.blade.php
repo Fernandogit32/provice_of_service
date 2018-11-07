@@ -20,8 +20,8 @@
                                
                                 
                                 @endif
-                                <label><img class="margin-foto" src="{{ url("storage/imagens/".$autonomo->foto)}}" alt="{{$autonomo->foto}}"/></label><br />
-                <label><strong>Nome:</strong> {{$autonomo->user->name}}</label><br />
+                                <label><img class="margin-foto imagem-avaliar" src="{{ url("storage/imagens/".$autonomo->foto)}}" alt="{{$autonomo->foto}}"/></label><br />
+                <label class="label-avaliar" ><strong>Nome:</strong> {{$autonomo->user->name}}</label>
                 <form action="/cliente/avaliar" method="POST">
                                 {{ csrf_field()}}
                         <div class="form-group descricao-pedido">

@@ -32,13 +32,14 @@
                      }
                    } 
                    echo " ".$qtd;
-                 ?><br/> 
+                 ?>
                     <form  method="GET" action="/cliente/pedido">
                 <button type="submit"  name="pedido" value="{{$autonomo->id}}" class="btn btn-success">Solicitar</button>
               </form>
+            </div>
+          </div>
     @endforeach
-</div>
-</div>
+
    
 
 </div>

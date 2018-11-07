@@ -5,7 +5,6 @@
     <div class="card">
 
         @if(Auth::user()->autonomo!=null)
-
         <div class="card-header">Nome: {{Auth::user()->name }}</div>
         <div class="card-header">E-mail: {{Auth::user()->email }}</div>
         <div class="card-header">Telefone: {{Auth::user()->autonomo->telefone}}</div>

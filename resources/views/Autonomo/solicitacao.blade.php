@@ -1,10 +1,10 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="container">
-    <h1 id="h1-autonomo" >Solicitações de serviços</h1>
-    <table class="table table-borderless">
-        <thead class="table-primary" >
+<div class="container-fluid">
+    <h1 id="h1-autonomo">Solicitações de serviços</h1>
+    <table class="table table-striped table-solicitacao table-solicitacao-autonomo">
+        <thead class="bg-primary head-solicitacao" >
                 <tr>
                         <th scope="col">Nome</th>
                         <th scope="col">Telefone</th>
@@ -21,7 +21,7 @@
             
             @foreach ($pedidos as $item)
              @if($item->status==0)
-            <tr>
+            <tr class="tr-solicitacao" >
                 <td>
                     {{$item->cliente->user->name}} 
                 </td>
@@ -60,7 +60,7 @@
               </tr>
               <tr style="border-bottom-style:solid">
                  
-                  <td colspan="9"><label style="color:red"><strong>Descrição:</strong></label>&nbsp&nbsp{{$item->descricao}} </td>
+                  <td colspan="9"><label style="color:blue"><strong>Descrição:</strong></label>&nbsp&nbsp{{$item->descricao}} </td>
             </tr>            
             
             @endif 

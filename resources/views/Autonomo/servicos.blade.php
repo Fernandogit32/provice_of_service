@@ -1,10 +1,10 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="container">
+<div class="container-fluid">
     <h1 id="h1-autonomo" >Serviços em andamento</h1>
-    <table class="table table-borderless">
-        <thead class="table-primary">
+    <table class="table table-striped table-solicitacao table-solicitacao-autonomo">
+        <thead class="bg-primary head-solicitacao">
                 <tr>
                         <th scope="col">Nome</th>
                         <th scope="col">Telefone</th>
@@ -46,12 +46,12 @@
                     <form action="finalizar" method="post">
                             {{ csrf_field() }}
                             <input name="id" value="{{$item->id}}" type="hidden"/>
-                        <button type="submit" class="btn btn-secondary">Finalizar</button>
+                        <button type="submit" class="btn btn-success">Finalizar</button>
                     </form>
                 </td>                        
               </tr>
               <tr style="border-bottom-style:solid">                 
-                  <td colspan="9"><label style="color:red"><strong>Descrição:</strong></label>&nbsp&nbsp{{$item->descricao}} </td>
+                  <td colspan="9"><label style="color:blue"><strong>Descrição:</strong></label>&nbsp&nbsp{{$item->descricao}} </td>
             </tr>            
             
             @endif 
