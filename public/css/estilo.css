@@ -240,6 +240,12 @@ h1#h1-autonomo {
     text-align: center;
 }
 
+/* home profissional */
+.fundo-profissional {
+    background: url('../img/fundo-profissional.jpg');
+    background-size: 1000px;
+}
+
 /* footer */
 .rodape{
     color: #fff;
