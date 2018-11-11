@@ -32,9 +32,9 @@ class PedidoRequest extends FormRequest
     function messages() {
         return [
             
-            'descricao.required' => 'O campo descrição é obrigatorio',
-            'descricao.max' => 'Limite de caracteres foi excedido o limite é 255 caracteres',
-            'descricao.min' => 'Sua descrição deve ter no minimo 10 caracter',            
+            'descricao.required' => 'O campo descrição é obrigatório',
+            'descricao.max' => 'Limite de caracteres foi excedido. O limite é de 255 caracteres',
+            'descricao.min' => 'Sua descrição deve ter no mínimo 10 caracter',            
         
         ];
         }

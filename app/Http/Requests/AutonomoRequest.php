@@ -35,14 +35,14 @@ class AutonomoRequest extends FormRequest
     function messages() {
         return [
             
-            'telefone.required' => 'O campo Telefone é obrigatorio',
+            'telefone.required' => 'O campo Telefone é obrigatório',
             'telefone.max' => 'O campo Telefone deve ter 10 digitos',
             'telefone.min' => 'O campo Telefone deve ter 10 digitos',
-            'celular.required' => 'O campo Celular é obrigatorio',
+            'celular.required' => 'O campo Celular é obrigatório',
             'celular.max' => 'O campo Celular deve ter 11 digitos',
             'celular.min' => 'O campo Celular deve ter 11 digitos',
-            'profissao.required' => 'O campo profissao é obrigatorio',              
-            'descricao.required' => 'O campo descricao é obrigatorio',              
+            'profissao.required' => 'O campo profissão é obrigatório',              
+            'descricao.required' => 'O campo descrição é obrigatório',              
         
         ];
         }

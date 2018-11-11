@@ -37,19 +37,19 @@ class ClienteRequest extends FormRequest
     function messages() {
         return [
             
-            'telefone.required' => 'O campo Telefone é obrigatorio',
+            'telefone.required' => 'O campo Telefone é obrigatório',
             'telefone.max' => 'O campo Telefone deve ter 10 digitos',
             'telefone.min' => 'O campo Telefone deve ter 10 digitos',
-            'celular.required' => 'O campo Celular é obrigatorio',
+            'celular.required' => 'O campo Celular é obrigatório',
             'celular.max' => 'O campo Celular deve ter 11 digitos',
             'celular.min' => 'O campo Celular deve ter 11 digitos',
-            'cep.required' => 'O campo Cep é obrigatorio',
+            'cep.required' => 'O campo Cep é obrigatório',
             'cep.max' => 'O campo Cep deve ter 8 digitos',
             'cep.min' => 'O campo Cep deve ter 8 digitos',
-            'cidade.required' => 'O campo Cidade é obrigatorio',
-            'bairro.required' => 'O campo Bairro é obrigatorio',
-            'rua.required' => 'O campo Rua é obrigatorio',
-            'numero.required' => 'O campo Número é obrigatorio',               
+            'cidade.required' => 'O campo Cidade é obrigatório',
+            'bairro.required' => 'O campo Bairro é obrigatório',
+            'rua.required' => 'O campo Rua é obrigatório',
+            'numero.required' => 'O campo Número é obrigatório',               
         
         ];
         }
