@@ -48,7 +48,7 @@
                                                                     
                                  </tr>
                                   <tr style="border-bottom-style:solid">                 
-                                            <td colspan="9"><label style="color:red"><strong>Descrição:</strong></label>&nbsp&nbsp{{$item->descricao}} </td>
+                                            <td colspan="9"><label style="color:blue"><strong>Descrição:</strong></label>&nbsp&nbsp{{$item->descricao}} </td>
                                       </tr>
                                       @endif 
                             @endforeach
