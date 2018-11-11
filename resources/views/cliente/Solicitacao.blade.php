@@ -2,9 +2,9 @@
 @section('content')
 
 
-<div class="container">
+<div class="container-fluid">
 <h1 id="h1-cliente">Solicitações de serviço</h1>
-        <table class="table table-borderless table-solicitacao">  
+        <table class="table table-striped table-solicitacao custom-sidebar">  
         <thead class="bg-primary head-solicitacao">
                 <tr>
                         <th scope="col">Profissional</th>

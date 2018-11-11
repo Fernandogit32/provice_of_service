@@ -3,7 +3,7 @@
 
 <div class="container-fluid">
     <h1 id="h1-autonomo">Solicitações de serviços</h1>
-    <table class="table table-striped table-solicitacao table-solicitacao-autonomo">
+    <table class="table table-striped table-solicitacao custom-sidebar">
         <thead class="bg-primary head-solicitacao" >
                 <tr>
                         <th scope="col">Nome</th>

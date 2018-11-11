@@ -1,9 +1,9 @@
 @extends('layouts.app')
 @section('content')
 
-<div class="container">
+<div class="container-fluid">
         <h1 id="h1-cliente" >Avalie os trabalhos prestados</h1>
-        <table class=" table table-borderless table-avaliacao">  
+        <table class=" table table-striped table-avaliacao custom-sidebar">  
         <thead class="bg-primary head-avaliacao">
                 <tr>
                                 <th scope="col">Profissional</th>

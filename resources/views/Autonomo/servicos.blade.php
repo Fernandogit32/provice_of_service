@@ -3,7 +3,7 @@
 
 <div class="container-fluid">
     <h1 id="h1-autonomo" >Serviços em andamento</h1>
-    <table class="table table-striped table-solicitacao table-solicitacao-autonomo">
+    <table class="table table-striped table-solicitacao custom-sidebar">
         <thead class="bg-primary head-solicitacao">
                 <tr>
                         <th scope="col">Nome</th>
@@ -13,7 +13,7 @@
                         <th scope="col">Bairro</th>
                         <th scope="col">Rua</th>
                         <th scope="col">Número</th>
-                        <th scope="col">Finalizar Serviço</th>             
+                        <th scope="col">Finalizar</th>             
                     </tr>
         </thead>
 

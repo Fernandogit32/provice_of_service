@@ -117,12 +117,28 @@ border-radius: 5px;
     padding: 50px;
     font-size: 50pt;
 }
+.p-homeCliente {
+    text-align: left;
+    font-family: 'Gotham', sans-serif;
+    color: white;
+    margin-left: 15%;
+    padding: 50px;
+    font-size: 20pt;
+}
 
 .fundo-home {
     background: url('../img/fundo-home.jpg');
     background-size: 100%;
     background-repeat: no-repeat;
     
+}
+.trabalhador-autonomo {
+    background: url('../img/trabalhador-autonomo.png');
+    background-repeat: no-repeat;
+    background-size: 415px;
+    background-position: bottom right;
+    background-position-x: 90%;
+
 }
 .trabalhador {
     background: url('../img/trabalhador.png');
@@ -132,7 +148,8 @@ border-radius: 5px;
     background-position-x: 90%;
 }
 .icones {
-    margin-top: 10%;
+    margin-left: 32px;
+    margin-top: 5%;
 }
 
 .icones label {
@@ -146,7 +163,7 @@ border-radius: 5px;
     margin-top: 120px;
     font-size: 30pt;
     font-family: Arial, Helvetica, sans-serif;
-    color: #1C1C1C;
+    color: #4169E1;
 }
 .card-home {
     margin-left: 25px;
@@ -162,7 +179,7 @@ border-radius: 5px;
     margin-left: 50px;
     margin-top: 10px;
 }
-/* editar cliente */
+/* editar cliente/profisssal */
 .card-cadastro-cliente {
     margin-top: 20px;
     margin-bottom: 20px;
@@ -187,6 +204,7 @@ border-radius: 5px;
     text-align: center;
     font-size: 20pt;
     font-family: Arial, Helvetica, sans-serif;
+    color: #4169E1;
 }
 .body-pedido {
     font-size: 13pt;
@@ -197,10 +215,11 @@ border-radius: 5px;
 }
 .label-pedido {
     font-size: 20pt;
+    color: #4169E1;
 }
 .h1-pedido {
     font-family: Arial, Helvetica, sans-serif;
-    
+    color: #4169E1;
 }
 .card-pedido {
     border: 1px solid #1E90FF;
@@ -227,41 +246,43 @@ border-radius: 5px;
 
 h1#h1-cliente {
     font-size: 20pt;
-    margin-top: 3%;
+    margin: 20px auto;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-weight: bold;
+    color: #4169E1;
 }
 
 /* autonomo */
 h1#h1-autonomo {
     font-size: 20pt;
-    margin-top: 3%;
+    margin: 20px auto;
     font-family: Arial, Helvetica, sans-serif;
     text-align: center;
     font-weight: bold;
+    color: #4169E1;
 }
 
 /* autonomo solicitacao */
-.table-solicitacao-autonomo {
+/* .table-solicitacao-autonomo {
     display: flow-root;
     margin-left: 7%;
     margin-top: 2%;
-}
+} */
 
-/* home profissional */
-.fundo-profissional {
-    background: url('../img/fundo-profissional.jpg');
-    background-size: 1000px;
+.custom-sidebar
+{
+    width: 1300px;
+    text-align: left;
+    margin: 0 auto;
 }
 
 /* footer */
 .rodape{
     color: #fff;
-    background: #008B8B;
-    height: 280px;
-    text-align: center;
-    top: 160%;   
+    background: #1E90FF;
+    height: 250px;
+    text-align: center;  
     width:100%;
     -webkit-box-shadow: inset 0 6px 6px -7px  black;  
     -moz-box-shadow: inset 0 6px 6px -7px  black;  
@@ -346,10 +367,10 @@ h1#h1-autonomo {
 .imagem-avaliar {
     margin: 0 168px auto;
 }
-.label-avaliar {
-    margin: 0 118px auto;
-    font-size: 15pt;
+.descricao-pedido {
+    text-align: justify;
 }
+
 /* busca */
 .h1-busca {
     font-family: Arial, Helvetica, sans-serif;
@@ -357,9 +378,14 @@ h1#h1-autonomo {
     font-size: 20pt;
     margin: 20px auto;
     text-align: center;
+    color: #4169E1;
 }
 .form-busca {
     text-align: center;
+}
+.card-informacao{
+    font-size: 13pt;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
   

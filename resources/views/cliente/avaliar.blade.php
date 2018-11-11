@@ -20,11 +20,11 @@
                                
                                 
                                 @endif
+                                <div class="form-group descricao-pedido">
                                 <label><img class="margin-foto imagem-avaliar" src="{{ url("storage/imagens/".$autonomo->foto)}}" alt="{{$autonomo->foto}}"/></label><br />
-                <label class="label-avaliar" ><strong>Nome:</strong> {{$autonomo->user->name}}</label>
+                                <label class="label-avaliar" ><strong>Nome:</strong> {{$autonomo->user->name}}</label>
                 <form action="/cliente/avaliar" method="POST">
                                 {{ csrf_field()}}
-                        <div class="form-group descricao-pedido">
                         <strong>Escolha uma nota de 1 a 5</strong><br />
                              <input name="id" value="{{$autonomo->id}}" type="hidden"/>
                              <input name="id_pedido" value="{{$pedido->id}}" type="hidden"/>
@@ -33,8 +33,8 @@
                              Nota 3: <input name="nota" type="radio" value="3"/>
                              Nota 4: <input name="nota" type="radio" value="4"/>
                              Nota 5: <input name="nota" type="radio" value="5"/>
-                             <label>Escreva um comentario sobre o serviço que foi prestado.</label>
-                             <textarea class="form-control" cols=60 name="comentario" rows="5" name="opiniao" maxlength="500" wrap="hard" placeholder="Escreva uma descrição dos serviços que você faz"></textarea>  <br />
+                             <label>Escreva um comentario sobre o serviço que foi prestado</label>
+                             <textarea class="form-control" cols=60 name="comentario" rows="5" name="opiniao" maxlength="500" wrap="hard" placeholder="Escreva o que você achou do serviço prestado..."></textarea>  <br />
                              <button type="submit" class="btn btn-primary">Enviar avaliação</button> 
                         </div>
                         </form>
