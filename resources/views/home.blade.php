@@ -19,7 +19,7 @@
 <label><img id="myImg" class="" height="50" src="{{ URL::to('/img/joia.png') }}"><br /><strong>Escolha o que você quer</strong><br />Pegue o contato do profissional<br /> escolhido e negocie diretos com eles. </label>
 <label><img id="myImg" class="" height="30" src="{{ URL::to('/img/estrelas.png') }}"><br /><strong>Avalie o profissional</strong><br />Dê uma nota para seu trabalho<br /> e uma breve descrição dos serviços prestados. </label>
 </div>
-<h1 class="h1-card">Os melhores avaliados</h1>
+<h1 class="h1-card">Profissionais que estão a sua disposição</h1>
 @foreach ($autonomos as $autonomo)
 <div class="opition card card-home mb-3" style="max-width: 18rem;">
         <img class="card-img-top margin-foto" style="max-height: 10rem;" src="{{ url("storage/imagens/".$autonomo->foto)}}" alt="{{$autonomo->foto}}" alt="Card image cap">
