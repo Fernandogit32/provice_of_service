@@ -47,12 +47,12 @@
 
 
     <?php 
-    $limite+=1; 
-    if($limite==10){
-        $limite=0; 
-        break;
-    } 
-    ?>
+    // $limite+=1; 
+    // if($limite==10){
+    //     $limite=0; 
+    //     break;
+    // } 
+    // ?>
       
     @endforeach
 </div>

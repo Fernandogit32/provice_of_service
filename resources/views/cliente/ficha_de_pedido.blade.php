@@ -49,16 +49,28 @@
 </form><br/>
 
 <h1 class="h1-pedido" >Comentários</h1>
+
 @foreach ($autonomo->pedidos as $key => $value)
-      @if ($value->status==4)
-      <div class="card">
-      <div class="card-body card-pedido"><strong>Cliente - {{$value->cliente->user->name}} : </strong> {{$value->comentario}}</div></div>
-    
+      @if ($value->status==4)      
+      <?php       
+        $data[]=explode(" ",$value->created_at);        
+        $DiaMesAnos[0]=explode("-",$data[0][0]);      
+        $comentarios[] = "<strong>Cliente -".$value->cliente->user->name." :</strong>".$value->comentario."  <strong>Data:</strong> ". $DiaMesAnos[0][2]."-".$DiaMesAnos[0][1]."-".$DiaMesAnos[0][0];
+        unset($data);
+        unset($DiaMesAnos);
+
+       
+        ?>  
+ 
      @endif
 @endforeach
-<br />
 
-
- 
+@if(isset($comentarios))
+<?php $reversed = array_reverse($comentarios); ?>
+@foreach ($reversed as $item)
+<div class="card">
+        <div class="card-body card-pedido"><?php echo $item; ?> </div>
+@endforeach
 </div>
+@endif
  @endsection
