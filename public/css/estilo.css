@@ -390,7 +390,7 @@ h1#h1-autonomo {
   }
   .estrelas label i.fa:before {
     content:'\f005';
-    color: yellow; 
+    color: #FFD700; 
           
   }
   .estrelas > input[type=radio]:hover ~ label i.fa:before {
@@ -400,5 +400,8 @@ h1#h1-autonomo {
   .estrelas input[type=radio]:checked ~ label i.fa:before {
     color: #CCC;  
   }
-  
+  .rating {
+    width: 250px;
+    font-size: 30pt;
+  }
   

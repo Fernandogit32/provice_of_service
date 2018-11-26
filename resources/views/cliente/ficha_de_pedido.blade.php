@@ -55,7 +55,7 @@
       <?php       
         $data[]=explode(" ",$value->created_at);        
         $DiaMesAnos[0]=explode("-",$data[0][0]);      
-        $comentarios[] = "<strong>Cliente -".$value->cliente->user->name." :</strong>".$value->comentario."  <strong>Data:</strong> ". $DiaMesAnos[0][2]."-".$DiaMesAnos[0][1]."-".$DiaMesAnos[0][0];
+        $comentarios[] = " <strong>Data:</strong> ". $DiaMesAnos[0][2]."-".$DiaMesAnos[0][1]."-".$DiaMesAnos[0][0]."&nbsp;&nbsp;&nbsp;<strong>Cliente -".$value->cliente->user->name." :</strong>".$value->comentario;
         unset($data);
         unset($DiaMesAnos);
 
@@ -70,7 +70,8 @@
 @foreach ($reversed as $item)
 <div class="card">
         <div class="card-body card-pedido"><?php echo $item; ?> </div>
+    </div> <br />
 @endforeach
-</div>
+
 @endif
  @endsection
