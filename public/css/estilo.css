@@ -97,10 +97,10 @@ border-radius: 5px;
 }
 
 .menu nav a:hover{ 
-    color: white;
+    color: black;
     -webkit-transition: 1s; /* Safari */
     transition:  0.5s;
-    background-color: #1E90FF;
+    text-decoration: overline;
 }
 
 /* home cliente */

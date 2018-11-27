@@ -10,7 +10,8 @@
     <!-- CSRF Token -->
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>{{ config('app.name', 'Laravel') }}</title>
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <title>Provision of Service</title>
 
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
@@ -28,7 +29,7 @@
 
     <div id="app">        
         <nav class="navbar navbar-expand-md navbar-light navbar-laravel">
-        <img id="myImg" class="logo" height="160" src="{{ URL::to('/img/logo.png') }}">
+        <a href="{{ route('home') }}"><img id="myImg" class="logo" height="160" src="{{ URL::to('/img/logo.png') }}"></a>
             <div class="container">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                     aria-expanded="false" aria-label="{{ __('Toggle navigation') }}">

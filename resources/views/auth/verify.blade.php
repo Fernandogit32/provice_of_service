@@ -1,4 +1,6 @@
 @extends('layouts.app')
+<link rel="shortcut icon" href="../img/favicon.ico">
+<title>Provision of Service</title>
 
 @section('content')
 <div class="container">
